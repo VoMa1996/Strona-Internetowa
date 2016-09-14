@@ -1,0 +1,9 @@
+body{background: url(Photos/mback.jpg); margin: 0; padding: 0;
+    font: 16px/24px Arial, Tahoma, sans-serif;
+    color: #efefef; }
+
+
+/*structer site */
+div.mid { width: 1000px; margin: 0 auto; }
+div.header { background: #000000;}
+div.topmenu { float: right; }
