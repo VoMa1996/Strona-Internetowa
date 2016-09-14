@@ -5,15 +5,39 @@ body{background: #efefef url(Photos/mback.jpg); margin: 0; padding: 0;
 
 
 /*structer site */
-div.mid { width: 1000px; margin: 0 auto; }
-div.header { background: #000000;}
-div.topmenu { float: right; height: 150px; line-height: 150px;}
-div.topmenu a{margin: 0 0 0 10px; color: #efefef;}
-div.topmenu a:hover{color: #ff0000;}
-div.afisha {padding: 20px 50px 0 50px; background: #ffffff url(Photos/head.jpg) top repeat-x;}
-div.afisha img{float: left;}
-div.afisha h3{font-size: 24px; font-weight: normal; text-align: center; color: black;}
-div.afisha p{text-align: center;}
-div.afisha a{}
+div.mid {
+  width: 1000px;
+   margin: 0 auto; }
+div.header {
+  }
+div.topmenu {
+   float: right;
+   height: 150px;
+   line-height: 150px;}
+div.topmenu a{
+  margin: 0 0 0 10px;
+   color: #efefef;}
+div.topmenu a:hover{
+  color: #ff0000;}
+div.afisha {
+  padding: 20px 50px 0 50px;
+   background: transparent url(Photos/head.jpg) top repeat-x;}
+div.afisha img{
 
-div.clear{clear: both;}
+  float: left;}
+div.afisha h3{font-size: 32px;
+   font-weight: normal;
+    text-align: center;
+     color: white;}
+div.afisha p{
+  text-align: center;}
+div.afisha a{
+  font-size: 20px;
+   color: red;
+   font-weight: bold;
+  background: white;
+  border: 2px solid black;
+  padding: 5px 15px;}
+
+div.clear{
+  clear: both;}
