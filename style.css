@@ -1,43 +1,103 @@
-body{background: #efefef url(Photos/mback.jpg); margin: 0; padding: 0;
+body {
+    background: #efefef url(Photos/backnew3.jpg);
+    margin: 0;
+    padding: 0;
     font: 16px/24px Arial, Tahoma, sans-serif;
-    color: #efefef; }
-    a{text-decoration: none}
-
-
+    color: #efefef;
+}
+a {
+    text-decoration: none
+}
 /*structer site */
+
+
 div.mid {
-  width: 1000px;
-   margin: 0 auto; }
-div.header {
-  }
+    width: auto;
+    margin: 0 auto;
+}
+
 div.topmenu {
-   float: right;
-   height: 150px;
-   line-height: 150px;}
-div.topmenu a{
-  margin: 0 0 0 10px;
-   color: #efefef;}
-div.topmenu a:hover{
-  color: #ff0000;}
+    float: right;
+    height: 150px;
+    line-height: 150px;
+}
+div.topmenu a {
+    margin: 0 0 0 10px;
+    color: #efefef;
+}
+div.topmenu a:hover {
+    color: #ff0000;
+}
 div.afisha {
-  padding: 20px 50px 0 50px;
-   background: transparent url(Photos/head.jpg) top repeat-x;}
-div.afisha img{
-
-  float: left;}
-div.afisha h3{font-size: 32px;
-   font-weight: normal;
+    padding: 20px 50px 0 50px;
+    background: transparent url(Photos/head.jpg) top repeat-x;
+}
+div.afisha img {
+    float: left;
+}
+div.afisha h3 {
+    font-size: 32px;
+    font-weight: normal;
     text-align: center;
-     color: white;}
-div.afisha p{
-  text-align: center;}
-div.afisha a{
-  font-size: 20px;
-   color: red;
-   font-weight: bold;
-  background: white;
-  border: 2px solid black;
-  padding: 5px 15px;}
+    color: white;
+}
+div.afisha p {
+    text-align: center;
+}
+div.afisha a {
+    font-size: 20px;
+    color:  #8B0000;
+    font-weight: bold;
+    background: white;
+    border: 2px solid black;
+    padding: 5px 15px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 7px -1px #777;
 
-div.clear{
-  clear: both;}
+}
+div.afisha a:hover{
+  color: red;
+}
+div.clear {
+    clear: both;
+}
+
+
+div.menu{
+  background: white;
+  border: 1px solid black;
+  color: red;
+  border-left: none;
+  border-right: none;
+}
+div.menu ul{
+  margin: 0; padding: 0;
+   list-style: none;
+   text-align: center;
+}
+div.menu ul li{
+  display: inline-block;
+  margin: 5px 50px;
+
+}
+
+div.menu ul li a{
+  color: red;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 3px #0b4455;
+}
+div.fon{
+  background: #fff;
+  border: 1px solid #ccc;
+  border-top: none;
+  padding: 40px;
+}
+div.block{
+  width: auto;;
+}
+div.anons{
+  background: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 20px;
+}
