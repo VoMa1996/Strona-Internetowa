@@ -31,10 +31,9 @@ div.topmenu a:hover {
 div.afisha {
     padding: 20px 50px 0 50px;
     background: transparent url(Photos/head.jpg) top repeat-x;
+    margin: 10px;
 }
-div.afisha img {
-    float: left;
-}
+
 div.afisha h3 {
     font-size: 32px;
     font-weight: normal;
@@ -44,6 +43,7 @@ div.afisha h3 {
 div.afisha p {
     text-align: center;
 }
+
 div.afisha a {
     font-size: 20px;
     color:  #8B0000;
@@ -54,6 +54,9 @@ div.afisha a {
     border-radius: 5px;
     box-shadow: 2px 2px 7px -1px #777;
 
+}
+div.afisha img{
+  margin: 10px;
 }
 div.afisha a:hover{
   color: red;
@@ -87,17 +90,45 @@ div.menu ul li a{
   text-shadow: 1px 1px 3px #0b4455;
 }
 div.fon{
-  background: #fff;
+  background: transparent;
   border: 1px solid #ccc;
   border-top: none;
   padding: 40px;
 }
 div.block{
-  width: auto;;
+  width: auto;
+  /*float: left;*/
+  display: inline-block;
 }
+div.block a p{
+  color: #fff;
+}
+
 div.anons{
-  background: #f5f5f5;
-  border: 1px solid #ccc;
+  background: transparent;
+  border: 1px solid #fff;
   border-radius: 3px;
   padding: 20px;
+}
+div.anons img{
+  box-shadow: 1px 1px 5px #777;
+  width: 100%;
+}
+
+div.anons h3{
+  font-size: 20px;
+  margin: 20px 0 10px;
+  color: #fff;
+  padding: 0;
+  font-weight: normal;
+  line-height: 20px;
+}
+div.anons p{
+  text-shadow: 1px 1px 0 #fff;
+}
+div.anons:hover{
+  background: grey;
+}
+a.link{
+  display:
 }
