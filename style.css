@@ -2,11 +2,15 @@ body {
     background: #efefef url(Photos/backnew3.jpg);
     margin: 0;
     padding: 0;
-    font: 16px/24px Arial, Tahoma, sans-serif;
+    font: 16px/24px Zapf Chancery, cursive;
     color: #efefef;
+    text-align: center;
 }
 a {
     text-decoration: none
+}
+a:hover{
+  transition: all 1s;
 }
 /*structer site */
 
@@ -15,18 +19,24 @@ div.mid {
     width: auto;
     margin: 0 auto;
 }
+div.mid a:hover{
+
+  text-decoration: none;
+}
 
 div.topmenu {
-    float: right;
+    float: center;
     height: 150px;
     line-height: 150px;
 }
 div.topmenu a {
     margin: 0 0 0 10px;
     color: #efefef;
+
 }
 div.topmenu a:hover {
     color: #ff0000;
+    text-decoration: none;
 }
 div.afisha {
     padding: 20px 50px 0 50px;
@@ -54,12 +64,17 @@ div.afisha a {
     border-radius: 5px;
     box-shadow: 2px 2px 7px -1px #777;
 
+
+}
+div.afisha a:hover{
+  text-decoration: none;
 }
 div.afisha img{
   margin: 10px;
 }
 div.afisha a:hover{
   color: red;
+
 }
 div.clear {
     clear: both;
@@ -85,13 +100,26 @@ div.menu ul li{
 }
 
 div.menu ul li a{
-  color: red;
+  color: black;
   text-transform: uppercase;
   text-shadow: 1px 1px 3px #0b4455;
+
+}
+div.menu ul li a:hover{
+  color: red;
+  text-transform: uppercase;
+  text-shadow: 2px 3px 7px red;
+
 }
 div.fon{
   background: transparent;
   border: 1px solid #ccc;
+  border-top: none;
+  padding: 40px;
+}
+div.fon2{
+  background: transparent;
+  border: 1px solid whi;
   border-top: none;
   padding: 40px;
 }
@@ -103,16 +131,27 @@ div.block{
 div.block a p{
   color: #fff;
 }
-
+div.block a:hover{
+  text-decoration: none;
+  }
 div.anons{
   background: transparent;
   border: 1px solid #fff;
   border-radius: 3px;
   padding: 20px;
+  margin: 10px;
 }
 div.anons img{
   box-shadow: 1px 1px 5px #777;
+  border: 2px outset black;
+  width: 70%;
+  transition: transform 1.4s;
+}
+div.anons:hover img{
+  transform: scale(1.01) rotate(362deg);
   width: 100%;
+
+
 }
 
 div.anons h3{
@@ -123,12 +162,57 @@ div.anons h3{
   font-weight: normal;
   line-height: 20px;
 }
+div.anons:hover  h3{
+  font-size: 20px;
+  margin: 20px 0 10px;
+  color: black;
+  padding: 0;
+  font-weight: normal;
+  line-height: 20px;
+
+  }
 div.anons p{
   text-shadow: 1px 1px 0 #fff;
 }
 div.anons:hover{
-  background: grey;
+  background: #F0FFFF;
+  transition: all 3s;
+}
+div.footer{
+  margin: 10px;
+  display: inline-block;
+}
+div.footer img{
+  width: 100%;
+}
+div.photo {
+  border: 3px solid white;
+  display:inline-block;;
+}
+div.photo img {
+
+  width: 30%;
+  transition: transform 1.4s;
+}
+div.photo:hover{
+  transform: scale(1.5);
+  transition: all 3s;
 }
 a.link{
   display:
+}
+
+div.galeria {
+  border: 2px solid white;
+}
+div.galeria img{
+  border-radius: 10px;
+  margin: 12px;
+  width: 30%;
+}
+div.galeria img:hover{
+  transform: scale(1.2) translate(0 , -26px);
+  transition: transform 1.4s;
+
+
 }
