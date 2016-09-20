@@ -1,11 +1,15 @@
 body {
-    background: #efefef url(Photos/backnew3.jpg);
+
+
+
+    background: #efefef url(Photos/backnew3.jpg) no-repeat center center fixed   ;
     margin: 0;
     padding: 0;
     font: 16px/24px Zapf Chancery, cursive;
     color: #efefef;
     text-align: center;
 }
+
 a {
     text-decoration: none
 }
@@ -215,4 +219,22 @@ div.galeria img:hover{
   transition: transform 1.4s;
 
 
+}
+
+div.topmenu button{
+  background: white;
+  color: black;
+  border-radius: 20px;
+}
+div.topmenu button:hover{
+  background: white;
+  color: red;
+  border-radius: 20px;
+}
+
+div.form-group label{
+  color: black;
+}
+div.modal-footer button{
+  color: blsck;
 }

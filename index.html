@@ -10,7 +10,6 @@
 
      <!-- Bootstrap -->
      <link href="bootstrap-3.3.7-dist/css/bootstrap.css" rel="stylesheet">
-     <link href="style.css" rel="stylesheet">
 
      <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -23,13 +22,20 @@
     <meta charset="utf-8">
     <link rel="shortcut icon" type="x-icon" href="Photos/logo.png">
     <link rel="stylesheet" href="style.css" media="all">
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bootstrap-3.3.7-dist/js/bootstrap.js"></script>
 </head>
 
 <body>
-  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-   <!-- Include all compiled plugins (below), or include individual files as needed -->
-   <script src="bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+
+
+  <!-- Button trigger modal -->
+
+
+<!-- Modal -->
+
 
     <div class="container">
 
@@ -40,10 +46,61 @@
                   <a href="index.html">Strona Glowna</a>
                   <a href="https://www.google.pl/search?q=bmw&biw=1920&bih=935&source=lnms&tbm=isch&sa=X&ved=0ahUKEwjowPG8wZHPAhVCDiwKHfFNBokQ_AUIBigB#q=bmw&tbm=isch&tbs=isz:lt,islt:4mp">Photos</a>
                   <a href="https://www.bmw.pl/pl/ssl/contact-requests/generic/customer-interaction-center.html">Kontakt</a>
-                  <a href="#">Log IN/OUT</a>
+                  <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+                  Login
+                  </button>
               </aside>
           </div>
+
+
+
+          <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+
+          <form action="/api/login" method="post" onsubmit="validateForm()" formvalidate>
+
+            <div class="modal-content">
+              <div class="modal-header">
+
+              </div>
+              <div class="modal-body">
+                <div class="form-group">
+
+                 <label for="exampleInputEmail1">Email address</label>
+                 <input
+                   type="email"
+                   class="form-control"
+                   id="exampleInputEmail1"
+                   placeholder="Email"
+                   name="email"
+                   autofocus required
+                  >
+
+                </div>
+                   <div class="form-group">
+                      <label for="exampleInputPassword1">Password</label>
+                      <input
+                        id="exampleInputPassword1"
+                        class="form-control"
+                        type="password"
+                        placeholder="Password"
+                        name="user_password"
+                        autofocus required
+                      >
+                    </div>
+              </div>
+              <div class="modal-footer">
+                <button class="btn btn-default" data-dismiss="modal">Cancel</button>
+                <button type="submit" class="btn btn-primary">Login</button>
+
+              </div>
+            </div>
+          </form>
+          </div>
+          </div>
+
           <img src="Photos/newl.png" alt="LogoSite" title="LogoSite">
+
           <div class="afisha" align="center">
               <img src="Photos/t-shirt2.png" alt="t-shirt" title="t-shirt" >
               <h3>You can WIN this t-shirt in our lottery!!!</h3>
@@ -61,7 +118,7 @@
               <ul>
                 <li><a href="#">New BMW</a></li>
                 <li><a href="#">BMW Photo</a></li>
-                <li><a href="#">Log IN/OUT</a></li>
+                <li><a href="#">Login</a></li>
               </ul>
             </nav>
         </div>
@@ -103,6 +160,10 @@
   </div>
 
   </div>
-</body>
 
+
+
+
+</body>
+    <script src="app.js"></script>
 </html>
