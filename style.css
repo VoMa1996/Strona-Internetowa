@@ -206,7 +206,7 @@ div.galeria {
   border: 2px solid white;
 }
 div.galeria img{
-  border-radius: 10px;
+  border-radius: 4px;
   margin: 12px;
   width: 30%;
 }
