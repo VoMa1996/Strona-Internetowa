@@ -2,10 +2,10 @@ body {
 
 
 
-    background: #efefef url(Photos/backnew3.jpg) no-repeat center center fixed   ;
+    background: black ;url(Photos/fon.jpg) no-repeat center center fixed   ;
     margin: 0;
     padding: 0;
-    font: 16px/24px Zapf Chancery, cursive;
+    font: 16px/24px Verdana	, sans-serif;
     color: #efefef;
     text-align: center;
 }
@@ -236,5 +236,49 @@ div.form-group label{
   color: black;
 }
 div.modal-footer button{
-  color: blsck;
+  color: black;
 }
+
+
+
+
+
+.sidebar{
+
+  display: block;
+  width: 250px;
+  padding: 20px;
+  float: left;
+  background: white;
+
+  transition: left 1s ease-out 0.5s;
+
+
+}
+.icon-menu{
+display: block;
+  height: 30px;
+  width: 20px;
+  float: left;
+  padding: 5px 0;
+  cursor: pointer;
+  /*margin-right: 10px;
+  margin-left: -10px;*/
+
+}
+.divide{
+  display: block;
+  height: 2px;
+  margin: 3px 0;
+
+  background: white;
+}
+.sidebar.active{
+  display: inline-block;
+  left: 0;
+}
+/*.content{
+  margin-left: 300px;
+  background: red;
+  padding: 20px;
+}*/

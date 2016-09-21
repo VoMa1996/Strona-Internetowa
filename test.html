@@ -22,16 +22,56 @@
     <title>Bavarski DOM</title>
     <meta charset="utf-8">
     <link rel="shortcut icon" type="x-icon" href="Photos/logo.png">
-    <link rel="stylesheet" href="style.css" media="all">
+    <link rel="stylesheet" href="test.css" media="all">
 </head>
 
+
+
+
+<script type="text/javascript">
+  console.log('It Works!!!')
+</script>
+
 <body>
+
+
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" ></script>
    <!-- Include all compiled plugins (below), or include individual files as needed -->
    <script src="bootstrap-3.3.7-dist/js/bootstrap.js"></script>
 
-    <div class="container">
+
+   <script type="text/javascript">
+     $(document).ready(function($){
+       $(".icon-menu").click(function(event){
+         $(".sidebar").toggleClass("active")
+       });
+     });
+   </script>
+
+<header class="container clearfix">
+
+<div class="icon-menu">
+
+<span class="divide"></span>
+<span class="divide"></span>
+<span class="divide"></span>
+
+</div>
+</header>
+<div class="container clearfix">
+
+
+         <div class="sidebar">
+
+         </div>
+</div>
+
+
+
+    <!-- <div class="container">
+
+
 
       <div class="col-xs-12">
         <header>
@@ -139,7 +179,7 @@
   </div>
   </div>
 
-  </div>
+  </div> -->
 </body>
 
 </html>
