@@ -10,7 +10,7 @@
 
      <!-- Bootstrap -->
      <link href="bootstrap-3.3.7-dist/css/bootstrap.css" rel="stylesheet">
-     <link href="style.css" rel="stylesheet">
+
 
      <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -41,15 +41,11 @@
    <script src="bootstrap-3.3.7-dist/js/bootstrap.js"></script>
 
 
-   <script type="text/javascript">
-     $(document).ready(function($){
-       $(".icon-menu").click(function(event){
-         $(".sidebar").toggleClass("active")
-       });
-     });
-   </script>
 
-<header class="container clearfix">
+
+<div class="menuside">
+
+
 
 <div class="icon-menu">
 
@@ -58,128 +54,22 @@
 <span class="divide"></span>
 
 </div>
-</header>
-<div class="container clearfix">
+</div>
+<!-- <div class="container clearfix"> -->
 
 
-         <div class="sidebar">
+         <div class="sidebar ">
 
          </div>
-</div>
 
-
-
-    <!-- <div class="container">
-
-
-
-      <div class="col-xs-12">
-        <header>
-          <div class="topmenu">
-              <aside>
-                  <a href="index.html#">Strona Glowna</a>
-                  <a href="https://www.google.pl/search?q=bmw&biw=1920&bih=935&source=lnms&tbm=isch&sa=X&ved=0ahUKEwjowPG8wZHPAhVCDiwKHfFNBokQ_AUIBigB#q=bmw&tbm=isch&tbs=isz:lt,islt:4mp">Photos</a>
-                  <a href="https://www.bmw.pl/pl/ssl/contact-requests/generic/customer-interaction-center.html">Kontakt</a>
-                  <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-                    Login
-                  </button>
-              </aside>
-          </div>
-          <img src="Photos/newl.png" alt="LogoSite" title="LogoSite">
-          <div class="afisha" align="center">
-              <img src="Photos/t-shirt2.png" alt="t-shirt" title="t-shirt" >
-              <h3>You can WIN this t-shirt in our lottery!!!</h3>
-              <p>
-                <a href="#"> PLAY </a>
-              </p>
-              <div class="clear">
-
-              </div>
-          </div>
-      </header>
-
-
-      <div class="galeria">
-        <div class="fon2" align="center">
-
-            <a class="link" href="Photos/m3_big/m3b1.jpg" >
-                <img src="Photos/m3_small/m3s1.jpeg" alt="animation in css3">
-            </a>
-            <a class="link" href="Photos/m3_big/m3b2.jpg">
-                <img src="Photos/m3_small/m3s2.jpeg" alt="animation in css3">
-            </a>
-            <a href="Photos/m3_big/m3b3.jpg">
-                <img src="Photos/m3_small/m3s3.jpeg" alt="animation in css3">
-            </a>
-            <a href="Photos/m3_big/m3b4.jpg">
-                <img src="Photos/m3_small/m3s4.jpeg" alt="animation in css3">
-            </a>
-            <a href="Photos/m3_big/m3b5.jpg">
-                <img src="Photos/m3_small/m3s5.jpeg" alt="animation in css3">
-            </a>
-            <a href="Photos/m3_big/m3b6.jpg">
-                <img src="Photos/m3_small/m3s6.jpeg" alt="animation in css3">
-            </a>
-          <div class="clear">
-
-          </div>
-        </div>
-
-      </div>
-
-
-
-    <div class="footer text-center" >
-      <img src="Photos/mpower.png" alt="LogoMPower" title="LogoMPower">
-    </div>
-
-  </div>
-  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-
-  <form action="/api/login" method="post" onsubmit="validateForm()" formvalidate>
-
-    <div class="modal-content">
-      <div class="modal-header">
-
-      </div>
-      <div class="modal-body">
-        <div class="form-group">
-
-         <label for="exampleInputEmail1">Email address</label>
-         <input
-           type="email"
-           class="form-control"
-           id="exampleInputEmail1"
-           placeholder="Email"
-           name="email"
-           autofocus required
-          >
-
-        </div>
-           <div class="form-group">
-              <label for="exampleInputPassword1">Password</label>
-              <input
-                id="exampleInputPassword1"
-                class="form-control"
-                type="password"
-                placeholder="Password"
-                name="user_password"
-                autofocus required
-              >
-            </div>
-      </div>
-      <div class="modal-footer">
-        <button class="btn btn-default" data-dismiss="modal">Cancel</button>
-        <button type="submit" class="btn btn-primary">Login</button>
-
-      </div>
-    </div>
-  </form>
-  </div>
-  </div>
-
-  </div> -->
 </body>
+
+<script type="text/javascript">
+  $(document).ready(function($){
+    $(".icon-menu").click(function(event){
+      $(".sidebar").toggleClass("active")
+    });
+  });
+</script>
 
 </html>

@@ -1,24 +1,28 @@
+body{
+  background: black;
+}
 .sidebar{
 
-  display: block;
-  width: 250px;
+position: fixed;
+  width: 100px;
+  height: 800px;
   padding: 20px;
-  float: left;
+  right: 0;
   background: white;
-
-  transition: left 1s ease-out 0.5s;
-
-
+  transition: right 1s;
 }
-.sidebar.active{
+.sidebar.active {
 
-  left: 0;
+position: relative;
+  right:  300px;
+
 }
 .icon-menu{
-display: block;
+position:relative;
+margin: 20px;
   height: 30px;
-  width: 20px;
-  float: left;
+  width: 25px;
+  float: center;
   padding: 5px 0;
   cursor: pointer;
   /*margin-right: 10px;

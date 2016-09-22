@@ -240,26 +240,55 @@ div.modal-footer button{
 }
 
 
-
-
-
 .sidebar{
 
-  display: block;
+/*position :relative;
   width: 250px;
+  height: 800px;
   padding: 20px;
-  float: left;
+
+  right: 0;
   background: white;
+  transition: right 1s;*/
 
-  transition: left 1s ease-out 0.5s;
+}
+.col-sm-4{
 
+  position :relative;
+    width: 250px;
+    height: 800px;
+    padding: 20px;
+
+    bottom: 0;
+    background: white;
+    transition:  0.1s;
+}
+
+.col-sm-8{
+  transition:  2s;
+
+}
+
+.col-sm-8.active1{
+/*position: fixed;*/
+
+transition:  2s;
+  width: 100%;
+
+}
+
+.col-sm-4.active {
+
+position: absolute;
+  bottom:  970px;
 
 }
 .icon-menu{
-display: block;
+position: center;
+
   height: 30px;
-  width: 20px;
-  float: left;
+  width: 25px;
+  float: center;
   padding: 5px 0;
   cursor: pointer;
   /*margin-right: 10px;
@@ -273,12 +302,3 @@ display: block;
 
   background: white;
 }
-.sidebar.active{
-  display: inline-block;
-  left: 0;
-}
-/*.content{
-  margin-left: 300px;
-  background: red;
-  padding: 20px;
-}*/
