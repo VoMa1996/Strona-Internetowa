@@ -5,6 +5,7 @@ body {font-family: Verdana, sans-serif;}
 
 /* Month header */
 .month {
+
     padding: 70px 25px;
     width: 100%;
     background: black;
@@ -38,6 +39,7 @@ body {font-family: Verdana, sans-serif;}
 
 /* Weekdays (Mon-Sun) */
 .weekdays {
+  display:flex;
     margin: 0;
     padding: 10px 0;
     background-color: white;
@@ -81,9 +83,23 @@ body {font-family: Verdana, sans-serif;}
 }
 
 
+.month{
 
+  text-align: center;
+  color: white;
+}
+.month li{
+  list-style-type: none;
+}
 
-
+.prev {
+  border: 0;
+  background: transparent;
+}
+.next {
+  border: 0;
+  background: transparent;
+}
 
 
 /*body{

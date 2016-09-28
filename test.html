@@ -38,7 +38,7 @@
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" ></script>
    <!-- Include all compiled plugins (below), or include individual files as needed -->
    <script src="bootstrap-3.3.7-dist/js/bootstrap.js"></script>
-
+<script src="moment.js"></script>
 <body>
 
   var Calendar = {
@@ -105,15 +105,24 @@ undefined
 
 
   Calendar.select.nextMonth();
-  <div class="month">
+
+
+
+
+
+  <div class="month" id="month">
     <ul>
-      <li class="prev">&#10094;</li>
-      <li class="next">&#10095;</li>
+      <!-- <li class="prev"></li> -->
+      <button onclick="click1()" class="prev">&#10094;</button>
+      <button onclick="click2()" class="next">&#10095;</button>
+
       <li>
-        September<br>
-        <span style="font-size:18px">2016</span>
+        <br>
+        <span style="font-size:18px"></span>
       </li>
     </ul>
+
+    <span1 class="currentDate"></span1>
   </div>
 
   <ul class="weekdays">
@@ -127,74 +136,36 @@ undefined
     <li>Su</li>
   </ul>
 
-<!-- var elementLi = '';
-for (var i; i <= getDaysNumber; i++) {
-  elementLi += '<li>' + i + '</li>';
-}
-
-var daysClass = document.querySellect('.days')[0];
-
-daysClass.appendChild(elementsLi); -->
-
-
 
   <ul class="days" id="days">
 
-    <!-- <li>1</li>
-    <li>2</li>
-    <li>3</li>
-    <li>4</li>
-    <li>5</li>
-    <li>6</li>
-    <li>7</li>
-    <li>8</li>
-    <li>9</li>
-    <li>10</li>
-    <li>11</li>
-    <li>12</li>
-    <li>13</li>
-    <li>14</li>
-    <li>15</li>
-    <li>16</li>
-    <li>17</li>
-    <li>18</li>
-    <li>19</li>
-    <li>20</li>
-    <li>21</li>
-    <li>22</li>
-    <li><span class="active">23</span></li>
-    <li>24</li>
-    <li>25</li>
-    <li>26</li>
-    <li>27</li>
-    <li>28</li>
-    <li>29</li>
-    <li>30</li>
-    <li>31</li>-->
   </ul>
 
 
-<marquee behavior="scroll" bgcolor="black" loop="-1" width="100%">
-   <i>
-      <font color="white">
-        Today's date is :
-        <strong>
-         <span id="time"></span>
-        </strong>
-      </font>
-   </i>
-</marquee>
+
 
 </body>
-<script>
 
-var today = new Date();
-document.getElementById('time').innerHTML=today;
+<!-- <script type="text/javascript">
+  function click2(){
 
+    function mounth_change(){
+      var d = new Date();
+      var k = d.getMonth();
+      var ul = document.getElementById("month");
 
-</script>
+      var li = document.createElement("li");
 
-<script type="text/javascript">
+      li.appendChild(document.createTextNode(moment().format('YYYY')));
+      ul.appendChild(li);
+
+  }
+  mounth_change();
+
+  }
+</script> -->
+
+<!-- <script type="text/javascript">
 function date_maker() {
 // var days = document.querySelector('.days');
 
@@ -205,15 +176,88 @@ function date_maker() {
   for(var k = 1; k <= 30; k++)
   {
   var li = document.createElement("li");
-  li.appendChild(document.createTextNode (k));
+  li.appendChild(document.createTextNode(k));
   ul.appendChild(li);
 
   }
 }
-date_maker();
-</script>
-//all_days[l] = li;
-//console.log(all_days[l]);
 
-// days.appendChild(ul);
+date_maker();
+</script> -->
+<script type="text/javascript">
+function qqq() {
+
+
+var ul = document.getElementById("days");
+    for(var k = 1; k <= date.daysInMonth(); k++)
+    {
+    var li = document.createElement("li");
+    li.appendChild(document.createTextNode(k));
+    ul.appendChild(li);
+
+    }
+  }
+</script>
+
+
+<script  type= "text/javascript">
+
+var date = moment();
+
+function activate() {
+    var span = document.querySelector('.currentDate');
+
+    span.innerText = date.format('MMMM YYYY');
+
+qqq();
+
+};
+
+function ready(fn) {
+  if (document.readyState != 'loading'){
+    fn();
+  } else {
+    document.addEventListener('DOMContentLoaded', fn);
+  }
+}
+ready(activate);
+
+function click2(){
+
+  $("#days").empty();
+
+  var span = document.querySelector('.currentDate');
+
+  span.innerText = date.add(1, 'month').format('MMMM YYYY');
+
+  qqq();
+
+}
+
+function click1(){
+
+  var span = document.querySelector('.currentDate');
+
+  span.innerText = date.add(-1, 'month').format('MMMM YYYY');
+
+}
+
+</script>
+
+<!-- <script  type= "text/javascript">
+  function mounth_maker(){
+    var d = new Date();
+    var k = d.getMonth();
+    var ul = document.getElementById("month");
+
+    var li = document.createElement("li");
+
+    li.appendChild(document.createTextNode(moment().format('MMMM YYYY')));
+    ul.appendChild(li);
+
+}
+mounth_maker();
+</script> -->
+
+
 </html>
