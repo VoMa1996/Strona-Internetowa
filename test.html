@@ -35,85 +35,56 @@
 </script>
 
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" ></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" >
+
+   </script>
    <!-- Include all compiled plugins (below), or include individual files as needed -->
    <script src="bootstrap-3.3.7-dist/js/bootstrap.js"></script>
 <script src="moment.js"></script>
-<body>
-
-  var Calendar = {
-    date: new Date(),
-    init: function(){
-      return this.currentDate;
-    },
-    currentDate: function() {
-      return new Date();
-    },
-
-    select: {
-      nextMonth: function() {
-        var month = new Date(this.date).getMonth();
-        this.date = new Date().setMonth(month + 1);
-      },
-
-      prevMonth: function() {
-        var month = new Date(this.date).getMonth();
-        this.date = new Date().setMonth(month - 1);
-      }
-    }
-
-
-  }
-
-  Calendar.init(); // 2
-
-
-
-  function saal(){
-var d = new Date();
-var month = new Array();
-month[0] = "January";
-month[1] = "February";
-month[2] = "March";
-month[3] = "April";
-month[4] = "May";
-month[5] = "June";
-month[6] = "July";
-month[7] = "August";
-month[8] = "September";
-month[9] = "October";
-month[10] = "November";
-month[11] = "December";
-var n = month[d.getMonth()];
-var k = n + ' ' + (d.getDate()+1);
-return k;
-}
-
-function getDaysInMonth(month, year) {
-     var date = new Date(year, month, 1);
-     var days = [];
-     while (date.getMonth() === month) {
-        days.push(new Date(date));
-        date.setDate(date.getDate() + 1);
-     }
-     return days;
-}
-
-undefined
 
 
 
 
-  Calendar.select.nextMonth();
+
+<!-- <script type="text/javascript">
+	setTimeout(function(){$('.loaderDis').fadeOut('fast')},500);  //30000 = 30 секунд
+
+</script> -->
+<!-- <script type="text/javascript">
+
+    var Dis = document.getElementById('loaderDis');
+    function focus1()
+        {
+        Dis.style.opacity = '3';
+        }
+    function blur1()
+        {
+        Dis.style.opacity = '1';
+        }
+    </script>
+
+
+<body> -->
 
 
 
 
+
+
+
+<div class="loaderDis" >
+<div class="" id="loader">
+
+</div>
+
+</div>
 
   <div class="month" id="month">
+
     <ul>
       <!-- <li class="prev"></li> -->
       <button onclick="click1()" class="prev">&#10094;</button>
+
       <button onclick="click2()" class="next">&#10095;</button>
 
       <li>
@@ -146,49 +117,16 @@ undefined
 
 </body>
 
-<!-- <script type="text/javascript">
-  function click2(){
 
-    function mounth_change(){
-      var d = new Date();
-      var k = d.getMonth();
-      var ul = document.getElementById("month");
-
-      var li = document.createElement("li");
-
-      li.appendChild(document.createTextNode(moment().format('YYYY')));
-      ul.appendChild(li);
-
-  }
-  mounth_change();
-
-  }
-</script> -->
-
-<!-- <script type="text/javascript">
-function date_maker() {
-// var days = document.querySelector('.days');
-
-  var ul = document.getElementById("days");
-  var all_days = [];
-
-
-  for(var k = 1; k <= 30; k++)
-  {
-  var li = document.createElement("li");
-  li.appendChild(document.createTextNode(k));
-  ul.appendChild(li);
-
-  }
-}
-
-date_maker();
-</script> -->
 <script type="text/javascript">
+
 function qqq() {
 
 
 var ul = document.getElementById("days");
+
+var k = moment('2016-9-31');
+
     for(var k = 1; k <= date.daysInMonth(); k++)
     {
     var li = document.createElement("li");
@@ -196,15 +134,30 @@ var ul = document.getElementById("days");
     ul.appendChild(li);
 
     }
+
+
   }
 </script>
 
+<script type="text/javascript">
+function addLoad() {
+
+   $("#loader").addClass("play");
+  setTimeout(function(){$("#loader").removeClass("play")},300);
+
+
+}
+
+
+</script>
 
 <script  type= "text/javascript">
 
 var date = moment();
 
 function activate() {
+ addLoad();
+
     var span = document.querySelector('.currentDate');
 
     span.innerText = date.format('MMMM YYYY');
@@ -214,6 +167,7 @@ qqq();
 };
 
 function ready(fn) {
+
   if (document.readyState != 'loading'){
     fn();
   } else {
@@ -223,6 +177,7 @@ function ready(fn) {
 ready(activate);
 
 function click2(){
+ addLoad();
 
   $("#days").empty();
 
@@ -235,6 +190,8 @@ function click2(){
 }
 
 function click1(){
+   addLoad();
+
 $("#days").empty();
   var span = document.querySelector('.currentDate');
 
@@ -244,20 +201,6 @@ qqq();
 
 </script>
 
-<!-- <script  type= "text/javascript">
-  function mounth_maker(){
-    var d = new Date();
-    var k = d.getMonth();
-    var ul = document.getElementById("month");
-
-    var li = document.createElement("li");
-
-    li.appendChild(document.createTextNode(moment().format('MMMM YYYY')));
-    ul.appendChild(li);
-
-}
-mounth_maker();
-</script> -->
 
 
 </html>
