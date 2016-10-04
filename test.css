@@ -1,144 +1,144 @@
-
-
-ul {list-style-type: none;}
-body {font-family: Verdana, sans-serif;}
-
-/* Month header */
-.month {
-
-    padding: 70px 25px;
-    width: 100%;
-    background: black;
-}
-
-/* Month list */
-.month ul {
-    margin: 0;
-    padding: 0;
-}
-
-.month ul li {
-    color: white;
-    font-size: 20px;
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-}
-
-/* Previous button inside month header */
-.month .prev {
-    float: left;
-    padding-top: 10px;
-}
-
-/* Next button */
-.month .next {
-    float: right;
-    padding-top: 10px;
-}
-
-/* Weekdays (Mon-Sun) */
-.weekdays {
-  display:flex;
-    margin: 0;
-    padding: 10px 0;
-    background-color: white;
-}
-
-.weekdays li {
-    display: inline-block;
-    width: 13.6%;
-    color: black;
-    text-align: center;
-}
-
-/* Days (1-31) */
-.days {
-    padding: 10px 0;
-    background: black;
-    margin: 0;
-
-}
-
-.days li {
-    list-style-type: none;
-    display: inline-block;
-    width: 13.6%;
-    text-align: center;
-    margin-bottom: 5px;
-    font-size:12px;
-    color: white;
-}
-
-/* Highlight the "current" day */
-.days li .active {
-    padding: 5px;
-    background: white;
-    font-size:14px;
-    color: red ;
-}
-
-
-.time{
-  color: red;
-}
-
-
-.month{
-
-  text-align: center;
-  color: white;
-}
-.month li{
+ul {
   list-style-type: none;
 }
 
-.prev {
+body {
+  font-family: Verdana, sans-serif;
+}
+
+.month {
+  padding: 70px 25px;
+  width: 100%;
+  background: black;
+}
+
+.month ul {
+  margin: 0;
+  padding: 0;
+}
+
+.month ul li {
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.month .back {
+  float: left;
+  padding-top: 10px;
+}
+
+.month .next {
+  float: right;
+  padding-top: 10px;
+}
+
+.month button {
+  outline: none;
+}
+
+.weekdays {
+  display: flex;
+  margin: 0;
+  padding: 10px 0;
+  background-color: white;
+}
+
+.weekdays li {
+  display: inline-block;
+  width: 13.6%;
+  color: black;
+  text-align: center;
+}
+
+.days {
+  padding: 10px 0;
+  background: black;
+  margin: 0;
+}
+
+.days li {
+  list-style-type: none;
+  display: inline-block;
+  width: 13.6%;
+  text-align: center;
+  margin-bottom: 5px;
+  font-size: 12px;
+  color: white;
+}
+
+.days li:hover {
+  color: red;
+}
+
+.days li .active {
+  padding: 5px;
+  background: white;
+  font-size: 14px;
+  color: red;
+}
+
+.time {
+  color: red;
+}
+
+.month {
+  text-align: center;
+  color: white;
+}
+
+.month li {
+  list-style-type: none;
+}
+
+.back {
   border: 0;
   background: transparent;
 }
+
 .next {
   border: 0;
   background: transparent;
 }
 
-.month button:hover {
-
-  color:red;
+.back:hover {
+  color: red;
+  transform: scale(4,4);
+  transition: transform 1s;
 }
 
-
-/*.days:hover {
-
-  transform: scale(1.01) rotate(2deg);
+.next:hover {
+  color: red;
+  transform: scale(4,4);
   transition: transform 1s;
-}*/
+}
 
-.loaderDis{
+.loaderDis {
   position: absolute;
-
   background: black;
   text-align: center;
   width: 100%;
   left: 0px;
-
-
-
 }
+
 .play {
-
   display: inline-block;
-    border: 8px solid white; /* Light grey */
-    border-top: 8px solid red; /* Blue */
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    animation: spin 0.8s linear infinite;
-
+  border: 8px solid white;
+  border-top: 8px solid red;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 0.8s linear infinite;
 }
 
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
 
+  100% {
+    transform: rotate(360deg);
+  }
 }
