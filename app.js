@@ -12,30 +12,13 @@ jQuery(document).ready(function($){
 
 
 
-
-function function1() {
-
-  var ul = document.getElementById("days");
-  var all_days = [];
-  var l = 0;
-  for(var k = 1; k <= 30; k++)
-  {
-  var li = document.createElement("li");
-  li.appendChild(document.createTextNode (k));
-  all_days[l] = li;
-  console.log(all_days[l]);
-  l++;
-  }
-
-
-}
-
 var start_month;
 var licznik;
 
 function buildCalendar(kol) {
+
     var ul = document.getElementById("days");
-    var k = moment('2016-9-31');
+
     if (kol == "Saturday") {
         licznik = 5;
     } else if (kol == "Sunday") {
@@ -57,10 +40,13 @@ function buildCalendar(kol) {
         ul.appendChild(li);
     }
     for (var k = 1; k <= date.daysInMonth(); k++) {
+
         var li = document.createElement("li");
         li.appendChild(document.createTextNode(k));
         ul.appendChild(li);
+
     }
+
 }
 var licz2;
 var t = moment().month();
@@ -98,7 +84,19 @@ function activate() {
     var span = document.querySelector('.currentDate');
     span.innerText = date.format('MMMM YYYY');
     var start_month = moment().startOf('month').format('dddd');
+
     buildCalendar(start_month);
+    var nowDate = moment().date();
+    $('.days li').eq(nowDate+licznik-1).addClass("active");
+    //  $('.days li').eq(nowDate+licznik-1).addClass("btn btn-default super");
+    // $('.days li').eq(nowDate+licznik-1).attr('data-toggle','popover');
+    // $('.days li').eq(nowDate+licznik-1).attr('data-placement','bottom');
+    // $('.days li').eq(nowDate+licznik-1).attr('data-content','Vivamus sagittis lacus vel augue laoreet rutrum faucibus.' );
+
+    // $(document).ready(function(){
+    //     $('[data-toggle="popover"]').popover();
+    // });
+
 };
 
 function ready(fn) {

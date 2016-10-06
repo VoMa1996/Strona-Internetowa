@@ -41,6 +41,10 @@ div.topmenu {
   background: white;
   color: red;
 }
+.topmenu img:hover{
+  transform: rotate(362deg) scale(1.1,1.1);
+  transition: transform 1s;
+}
 .logo{
   text-align: center;
   margin: 10px;
@@ -226,11 +230,9 @@ body {
   color: red;
 }
 
-.days li .active {
-  padding: 5px;
-  background: white;
-  font-size: 14px;
-  color: red;
+.days li.active {
+
+  color: orange;
 }
 
 .time {

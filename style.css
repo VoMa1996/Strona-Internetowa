@@ -20,6 +20,7 @@ a:hover{
 
 
 div.mid {
+
     width: auto;
     margin: 0 auto;
 }
@@ -41,6 +42,14 @@ div.topmenu a {
 div.topmenu a:hover {
     color: #ff0000;
     text-decoration: none;
+}
+.topmenu img:hover{
+  transform: rotate(362deg) scale(1.1,1.1);
+  transition: transform 1s;
+}
+
+.btn.bd-btn:focus {
+  outline: none;
 }
 
 div.afisha {
@@ -154,6 +163,7 @@ div.anons img{
 }
 div.anons:hover img{
   transform: scale(1.01) rotate(362deg);
+
   width: 100%;
 
 
@@ -194,7 +204,10 @@ div.photo {
   border: 3px solid white;
   display:inline-block;;
 }
-div.photo img {
+
+
+
+.photo img {
 
   width: 30%;
   transition: transform 1.4s;
@@ -205,6 +218,9 @@ div.photo:hover{
 }
 a.link{
   display:
+}
+.bd-btn .glyphicon.bigger-icon {
+
 }
 
 div.galeria {
@@ -223,6 +239,7 @@ div.galeria img:hover{
 }
 
 div.topmenu button{
+
   background: white;
   color: black;
   border-radius: 20px;
@@ -302,4 +319,13 @@ position: center;
   margin: 3px 0;
 
   background: white;
+}
+
+
+
+/*test 3*/
+
+
+.days li.btn.super{
+  width: 20px !important
 }
