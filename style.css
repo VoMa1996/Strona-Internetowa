@@ -30,9 +30,11 @@ div.mid a:hover{
 }
 
 div.topmenu {
-    /*float: center;*/
-    height: 150px;
+  display:block;
+    float: center;
+
     line-height: 150px;
+    width: 100%;
 }
 div.topmenu a {
     margin: 0 0 0 10px;

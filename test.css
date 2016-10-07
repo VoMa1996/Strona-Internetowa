@@ -30,7 +30,7 @@ div.mid a:hover{
 
 div.topmenu {
     text-align: center;
-    height: 150px;
+    width: 100%;
     line-height: 150px;
 }
 .topmenu button{
@@ -342,13 +342,13 @@ img {
   transition: transform 1s;
 }
 .advert span.myBack:hover {
-  transform: translateX(-40px) scale(4,4);
+  transform: translateX(-50px) scale(4,4);
   /*transform: scale(4,4);*/
   transition: transform 1s;
   color: red;
 }
 .advert span.myNext:hover {
-  transform: translateX(40px) scale(4,4);
+  transform: translateX(50px) scale(4,4);
   /*transform: scale(4,4);*/
   transition: transform 1s;
   color: red;
