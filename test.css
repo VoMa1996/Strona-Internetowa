@@ -49,6 +49,13 @@ div.topmenu {
   text-align: center;
   margin: 10px;
 }
+.footCal{
+
+  text-align: center;
+}
+.footCal img{
+  margin: 10px;
+}
 div.topmenu a {
     margin: 0 0 0 10px;
     color: #efefef;
@@ -312,5 +319,37 @@ div.fon2{
   padding: 40px;
 }
 img {
+
+
   text-align: center;
+}
+.days li.btn.super{
+  background: transperent;
+}
+.advert myAdv{
+  display: block;
+  text-align: center;
+}
+.advert{
+  margin: 10px;
+}
+.advert a{
+
+  background: black;
+}
+
+.advert span{
+  transition: transform 1s;
+}
+.advert span.myBack:hover {
+  transform: translateX(-40px) scale(4,4);
+  /*transform: scale(4,4);*/
+  transition: transform 1s;
+  color: red;
+}
+.advert span.myNext:hover {
+  transform: translateX(40px) scale(4,4);
+  /*transform: scale(4,4);*/
+  transition: transform 1s;
+  color: red;
 }

@@ -91,8 +91,8 @@ function activate() {
     //  $('.days li').eq(nowDate+licznik-1).addClass("btn btn-default super");
     // $('.days li').eq(nowDate+licznik-1).attr('data-toggle','popover');
     // $('.days li').eq(nowDate+licznik-1).attr('data-placement','bottom');
-    // $('.days li').eq(nowDate+licznik-1).attr('data-content','Vivamus sagittis lacus vel augue laoreet rutrum faucibus.' );
-
+    // $('.days li').eq(nowDate+licznik-1).attr('data-content',' ' );
+    //
     // $(document).ready(function(){
     //     $('[data-toggle="popover"]').popover();
     // });
