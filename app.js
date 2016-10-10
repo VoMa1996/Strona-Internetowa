@@ -4,11 +4,7 @@ function validateForm() {
   console.log('email', $('#exampleInputEmail1').val());
 }
 
-jQuery(document).ready(function($){
-  $('.icon-menu').click(function(event){
-    $('.sidebar').toggleClass('active')
-  });
-});
+
 
 
 
@@ -38,6 +34,7 @@ function buildCalendar(kol) {
         var li = document.createElement("li");
         li.appendChild(document.createTextNode(' '));
         ul.appendChild(li);
+
     }
     for (var k = 1; k <= date.daysInMonth(); k++) {
 
@@ -70,6 +67,12 @@ function next() {
     start_month = date.startOf('month').month(currentMonth).format('dddd');
     buildCalendar(start_month);
 }
+function add() {
+
+$('.sidebar').toggleClass('active2')
+
+
+}
 
 function addLoad() {
     $("#loader").addClass("play");
@@ -88,11 +91,19 @@ function activate() {
     buildCalendar(start_month);
     var nowDate = moment().date();
     $('.days li').eq(nowDate+licznik-1).addClass("active");
+    $('.days li').addClass("add");
+    $('.days li').attr("onclick",'add()');
+
+
+
     //  $('.days li').eq(nowDate+licznik-1).addClass("btn btn-default super");
     // $('.days li').eq(nowDate+licznik-1).attr('data-toggle','popover');
     // $('.days li').eq(nowDate+licznik-1).attr('data-placement','bottom');
     // $('.days li').eq(nowDate+licznik-1).attr('data-content',' ' );
-    //
+    // $('.days li').eq(nowDate+licznik-1).addClass("btn btn-primary");
+
+// <button type="button" class="btn btn-primary">Primary</button>
+
     // $(document).ready(function(){
     //     $('[data-toggle="popover"]').popover();
     // });

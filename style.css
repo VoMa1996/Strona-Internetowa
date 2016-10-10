@@ -276,14 +276,14 @@ div.modal-footer button{
 }
 .col-sm-4{
 
-  position :relative;
+  display: inline-block;
     width: 250px;
     height: 800px;
     padding: 20px;
 
     bottom: 0;
     background: white;
-    transition:  0.1s;
+    transition:  2s;
 }
 
 .col-sm-8{
