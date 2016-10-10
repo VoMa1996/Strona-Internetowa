@@ -43,7 +43,7 @@ function buildCalendar(kol) {
         ul.appendChild(li);
 
     }
-
+$('.days li').attr("onclick",'add()');
 }
 var licz2;
 var t = moment().month();
@@ -92,7 +92,7 @@ function activate() {
     var nowDate = moment().date();
     $('.days li').eq(nowDate+licznik-1).addClass("active");
     $('.days li').addClass("add");
-    $('.days li').attr("onclick",'add()');
+    // $('.days li').attr("onclick",'add()');
 
 
 

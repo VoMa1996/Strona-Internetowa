@@ -334,6 +334,7 @@ img {
   text-align: center;
 }
 .advert{
+
   margin: 10px;
 }
 .advert a{
@@ -367,7 +368,7 @@ img {
 
   position: absolute;
     right:  1700px;
-    transition: 2s;
+    transition: 0.2s;
     width: 100%;
 }
 .sidebar.active2{
@@ -381,6 +382,6 @@ img {
 
       right: 0;
       background: white;
-      transition:  2s;
+      transition:  1s;
 
 }

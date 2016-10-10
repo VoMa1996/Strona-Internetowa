@@ -276,7 +276,7 @@ div.modal-footer button{
 }
 .col-sm-4{
 
-  display: inline-block;
+  position: relative;
     width: 250px;
     height: 800px;
     padding: 20px;
