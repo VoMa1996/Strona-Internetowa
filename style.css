@@ -7,7 +7,7 @@ body {
     padding: 0;
     font: 16px/24px Verdana	, sans-serif;
     color: #efefef;
-    text-align: center;
+
 }
 
 a {
@@ -55,6 +55,7 @@ div.topmenu a:hover {
 }
 
 div.afisha {
+
     padding: 20px 50px 0 50px;
     background: transparent url(Photos/head.jpg) top repeat-x;
     margin: 10px;
@@ -87,6 +88,8 @@ div.afisha a:hover{
   text-decoration: none;
 }
 div.afisha img{
+  display: inline-block;
+  width: 100%;
   margin: 10px;
 }
 div.afisha a:hover{
@@ -324,9 +327,20 @@ position: center;
 
   background: white;
 }
+.footCal{
 
+  text-align: center;
+}
 
-
+div.topmenu {
+    text-align: center;
+    width: 100%;
+    line-height: 150px;
+}
+.logo{
+  text-align: center;
+  margin: 10px;
+}
 /*test 3*/
 
 
@@ -357,17 +371,24 @@ position: center;
   color: red;
 }
 .container{
-  display: none;
+  position :relative;
+
+    padding: 20px;
+
+    left: -2000px;
+
+    transition: left 1s;
 }
 .container.active3{
-  display:inline-block;
+  left: 0;
 
-  transition: transform 5s;
+  transition: left 1s;
 
 
 }
 .fullLoad{
 
+  text-align: center;
   color:white;
   margin: 270px;
 

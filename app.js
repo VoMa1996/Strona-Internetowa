@@ -86,14 +86,35 @@ $('.sidebar').toggleClass('active2')
 function load() {
   setTimeout(function() {
       $(".container").addClass("active3")
-      
+
   }, 500);
   // $('.container').toggleClass('active3')
   // $('.fullLoad').toggleClass('active3')
   setTimeout(function() {
       $(".fullLoad").addClass("active3")
   }, 500);
+  var embed = document.getElementById(".startEngine");
+  $('#startEngine').attr("src","Photos/start.mp3");
+  $('#startEngine').attr("autostart","true");
+  $('#startEngine').attr("loop","true");
+  $('#startEngine').attr("width","2");
+  $('#startEngine').attr("height","0");
+
+
+
 }
+
+// function loadCal() {
+//   setTimeout(function() {
+//       $(".my").addClass("active5")
+//
+//   }, 500);
+//   // $('.container').toggleClass('active3')
+//   // $('.fullLoad').toggleClass('active3')
+//   setTimeout(function() {
+//       $(".container").addClass("active4")
+//   }, 500);
+// }
 
 function addLoad() {
     $("#loader").addClass("play");
@@ -104,8 +125,8 @@ function addLoad() {
 var date = moment();
 
 function activate() {
-  load();
-    clock();
+  // load();
+    // clock();
     addLoad();
     var span = document.querySelector('.currentDate');
     span.innerText = date.format('MMMM YYYY');
