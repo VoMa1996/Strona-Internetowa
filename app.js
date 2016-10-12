@@ -83,6 +83,13 @@ $('.sidebar').toggleClass('active2')
 
 }
 
+function remAct() {
+
+      $(".container").addClass("active3");
+
+
+}
+
 function load() {
   setTimeout(function() {
       $(".container").addClass("active3")

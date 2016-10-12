@@ -391,3 +391,19 @@ img {
   text-align: center;
   list-style-type: none;
 }
+.container{
+  position :relative;
+
+    padding: 20px;
+
+    left: -2000px;
+
+    transition: left 1s;
+}
+.container.active3{
+  left: 0;
+
+  transition: left 1s;
+
+
+}
