@@ -45,6 +45,15 @@ function buildCalendar(kol) {
     }
 $('.days li').attr("onclick",'add()');
 }
+
+function clock() {
+   var ul = document.getElementById("clock");
+   var li = document.createElement("li");
+   li.appendChild(document.createTextNode(moment().format("H:mm")));
+   ul.appendChild(li);
+
+}
+
 var licz2;
 var t = moment().month();
 
@@ -74,6 +83,18 @@ $('.sidebar').toggleClass('active2')
 
 }
 
+function load() {
+  setTimeout(function() {
+      $(".container").addClass("active3")
+      
+  }, 500);
+  // $('.container').toggleClass('active3')
+  // $('.fullLoad').toggleClass('active3')
+  setTimeout(function() {
+      $(".fullLoad").addClass("active3")
+  }, 500);
+}
+
 function addLoad() {
     $("#loader").addClass("play");
     setTimeout(function() {
@@ -83,6 +104,8 @@ function addLoad() {
 var date = moment();
 
 function activate() {
+  load();
+    clock();
     addLoad();
     var span = document.querySelector('.currentDate');
     span.innerText = date.format('MMMM YYYY');
@@ -92,21 +115,7 @@ function activate() {
     var nowDate = moment().date();
     $('.days li').eq(nowDate+licznik-1).addClass("active");
     $('.days li').addClass("add");
-    // $('.days li').attr("onclick",'add()');
 
-
-
-    //  $('.days li').eq(nowDate+licznik-1).addClass("btn btn-default super");
-    // $('.days li').eq(nowDate+licznik-1).attr('data-toggle','popover');
-    // $('.days li').eq(nowDate+licznik-1).attr('data-placement','bottom');
-    // $('.days li').eq(nowDate+licznik-1).attr('data-content',' ' );
-    // $('.days li').eq(nowDate+licznik-1).addClass("btn btn-primary");
-
-// <button type="button" class="btn btn-primary">Primary</button>
-
-    // $(document).ready(function(){
-    //     $('[data-toggle="popover"]').popover();
-    // });
 
 };
 

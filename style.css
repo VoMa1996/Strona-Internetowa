@@ -276,7 +276,7 @@ div.modal-footer button{
 }
 .col-sm-4{
 
-  position: relative;
+  position:
     width: 250px;
     height: 800px;
     padding: 20px;
@@ -355,4 +355,32 @@ position: center;
   /*transform: scale(4,4);*/
   transition: transform 1s;
   color: red;
+}
+.container{
+  display: none;
+}
+.container.active3{
+  display:inline-block;
+
+  transition: transform 5s;
+
+
+}
+.fullLoad{
+
+  color:white;
+  margin: 270px;
+
+}
+body:hover .fullLoad img{
+  transform: translateX(1400px) rotate(360deg);
+  transition: transform 1s;
+
+
+
+}
+.fullLoad.active3{
+  display: none;
+  color:white;
+  margin: 500px;
 }
