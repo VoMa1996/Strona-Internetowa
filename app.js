@@ -1,13 +1,6 @@
-console.log('It Works!!!')
-
 function validateForm() {
-  console.log('email', $('#exampleInputEmail1').val());
+    console.log('email', $('#exampleInputEmail1').val());
 }
-
-
-
-
-
 var start_month;
 var licznik;
 
@@ -31,6 +24,7 @@ function buildCalendar(kol) {
         licznik = 4;
     }
     for (var k = 1; k <= licznik; k++) {
+
         var li = document.createElement("li");
         li.appendChild(document.createTextNode(' '));
         ul.appendChild(li);
@@ -43,19 +37,18 @@ function buildCalendar(kol) {
         ul.appendChild(li);
 
     }
-$('.days li').attr("onclick",'add()');
+    $('.days li').attr("onclick", 'add()');
 }
 
 function clock() {
-   var ul = document.getElementById("clock");
-   var li = document.createElement("li");
-   li.appendChild(document.createTextNode(moment().format("H:mm")));
-   ul.appendChild(li);
-
+    var ul = document.getElementById("clock");
+    var li = document.createElement("li");
+    li.appendChild(document.createTextNode(moment().format("H:mm")));
+    ul.appendChild(li);
 }
 
 var licz2;
-var t = moment().month();
+
 
 function back() {
     addLoad();
@@ -76,53 +69,30 @@ function next() {
     start_month = date.startOf('month').month(currentMonth).format('dddd');
     buildCalendar(start_month);
 }
+
 function add() {
-
-$('.sidebar').toggleClass('active2')
-
-
+    $('.sidebar').toggleClass('active2')
 }
 
 function remAct() {
-
-      $(".container").addClass("active3");
-
-
+    $(".container").addClass("active3");
 }
 
 function load() {
-  setTimeout(function() {
-      $(".container").addClass("active3")
-
-  }, 500);
-  // $('.container').toggleClass('active3')
-  // $('.fullLoad').toggleClass('active3')
-  setTimeout(function() {
-      $(".fullLoad").addClass("active3")
-  }, 500);
-  var embed = document.getElementById(".startEngine");
-  $('#startEngine').attr("src","Photos/start.mp3");
-  $('#startEngine').attr("autostart","true");
-  $('#startEngine').attr("loop","true");
-  $('#startEngine').attr("width","2");
-  $('#startEngine').attr("height","0");
-
-
+    setTimeout(function() {
+        $(".container").addClass("active3")
+    }, 500);
+    setTimeout(function() {
+        $(".fullLoad").addClass("active3")
+    }, 500);
+    var embed = document.getElementById(".startEngine");
+    $('#startEngine').attr("src", "Photos/start.mp3");
+    $('#startEngine').attr("autostart", "true");
+    $('#startEngine').attr("loop", "true");
+    $('#startEngine').attr("width", "2");
+    $('#startEngine').attr("height", "0");
 
 }
-
-// function loadCal() {
-//   setTimeout(function() {
-//       $(".my").addClass("active5")
-//
-//   }, 500);
-//   // $('.container').toggleClass('active3')
-//   // $('.fullLoad').toggleClass('active3')
-//   setTimeout(function() {
-//       $(".container").addClass("active4")
-//   }, 500);
-// }
-
 function addLoad() {
     $("#loader").addClass("play");
     setTimeout(function() {
@@ -132,7 +102,7 @@ function addLoad() {
 var date = moment();
 
 function activate() {
-  // load();
+    // load();
     // clock();
     addLoad();
     var span = document.querySelector('.currentDate');
@@ -141,7 +111,7 @@ function activate() {
 
     buildCalendar(start_month);
     var nowDate = moment().date();
-    $('.days li').eq(nowDate+licznik-1).addClass("active");
+    $('.days li').eq(nowDate + licznik - 1).addClass("active");
     $('.days li').addClass("add");
 
 
@@ -155,3 +125,9 @@ function ready(fn) {
     }
 }
 ready(activate);
+
+$(document).ready(function($) {
+    $(".icon-menu").click(function(event) {
+        $(".sidebar").toggleClass("active")
+    });
+});

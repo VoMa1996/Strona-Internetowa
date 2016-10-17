@@ -45,6 +45,17 @@ div.topmenu a:hover {
     color: #ff0000;
     text-decoration: none;
 }
+
+
+.topmenu button{
+  background: white;
+  color: black;
+}
+.topmenu button:hover{
+  background: white;
+  color: red;
+}
+
 .topmenu img:hover{
   transform: rotate(362deg) scale(1.1,1.1);
   transition: transform 1s;
@@ -53,6 +64,20 @@ div.topmenu a:hover {
 .btn.bd-btn:focus {
   outline: none;
 }
+
+
+
+.logo{
+  text-align: center;
+  margin: 10px;
+}
+.footCal{
+
+  text-align: center;
+}
+
+
+
 
 div.afisha {
 
@@ -230,7 +255,7 @@ a.link{
 }
 
 div.galeria {
-  margin: 10px;
+  margin: 0;
   border: 2px solid white;
 }
 div.galeria img{
@@ -263,6 +288,257 @@ div.form-group label{
 div.modal-footer button{
   color: black;
 }
+
+
+ul {
+  list-style-type: none;
+}
+
+body {
+  font-family: Verdana, sans-serif;
+}
+
+.month {
+  padding: 70px 25px;
+  width: 100%;
+  background: black;
+}
+
+.month ul {
+  margin: 0;
+  padding: 0;
+}
+
+.month ul li {
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.month .back {
+  float: left;
+  padding-top: 10px;
+}
+
+.month .next {
+  float: right;
+  padding-top: 10px;
+}
+
+.month button {
+  outline: none;
+}
+
+.weekdays {
+  display: flex;
+  margin: 0;
+  padding: 10px 0;
+  background-color: white;
+}
+
+.weekdays li {
+  display: inline-block;
+  width: 13.6%;
+  color: black;
+  text-align: center;
+}
+
+.days {
+  padding: 10px 0;
+  background: black;
+  margin: 0;
+
+
+}
+
+.days li {
+  list-style-type: none;
+  display: inline-block;
+  width: 13.6%;
+  text-align: center;
+  margin-bottom: 5px;
+  font-size: 12px;
+  color: white;
+
+}
+
+.days li:hover {
+  color: red;
+}
+
+.days li.active {
+
+  color: orange;
+}
+
+.time {
+  color: red;
+}
+
+.month {
+  text-align: center;
+  color: white;
+}
+
+.month li {
+  list-style-type: none;
+}
+
+.back {
+  border: 0;
+  background: transparent;
+  transition: transform 1s;
+}
+
+.next {
+  border: 0;
+  background: transparent;
+  transition: transform 1s;
+}
+
+.back:hover {
+  color: red;
+  transform: scale(4,4);
+  transition: transform 1s;
+}
+
+.next:hover {
+  color: red;
+  transform: scale(4,4);
+  transition: transform 1s;
+}
+
+.loaderDis {
+  position: absolute;
+  background: transperent;
+  text-align: center;
+  width: 100%;
+  left: 0px;
+
+}
+
+.play {
+  display: inline-block;
+  border: 8px solid white;
+  border-top: 8px solid red;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 0.3s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+div.galeria {
+  border: 2px solid white;
+}
+
+div.fon2{
+  background: black;
+
+
+  padding: 40px;
+}
+img {
+
+
+  text-align: center;
+}
+.days li.btn.super{
+  background: transperent;
+}
+.advert myAdv{
+  display: block;
+  text-align: center;
+}
+.advert{
+
+  margin: 10px;
+}
+.advert a{
+
+  background: black;
+}
+
+.advert span{
+  transition: transform 1s;
+}
+.advert span.myBack:hover {
+  transform: translateX(-50px) scale(4,4);
+  /*transform: scale(4,4);*/
+  transition: transform 1s;
+  color: red;
+}
+.advert span.myNext:hover {
+  transform: translateX(50px) scale(4,4);
+  /*transform: scale(4,4);*/
+  transition: transform 1s;
+  color: red;
+}
+.modal-header h4{
+  color: black;
+  text-align: center;
+}
+.form-group label{
+  color: black;
+}
+.sidebar{
+
+  position: absolute;
+    right:  1700px;
+    transition: 0.2s;
+    width: 100%;
+}
+.sidebar.active2{
+      border-right: 2px solid white;
+      border-left: 2px solid white;
+      border-bottom: 2px solid white;
+      position: relative;
+      width: 100%;
+      height: auto;
+      padding: 10px;
+
+      right: 0;
+      background: black;
+      transition:  1s;
+
+}
+.clock li{
+  color: white;
+  font: 24px/36px Zapf Chancery, cursive;
+  text-align: center;
+  list-style-type: none;
+}
+.container{
+  position :relative;
+
+    padding: 20px;
+
+    left: -2000px;
+
+    transition: left 1s;
+}
+.container.active3{
+  left: 0;
+
+  transition: left 1s;
+
+
+}
+
+
+
+
 
 
 .sidebar{
