@@ -70,6 +70,26 @@ function next() {
     buildCalendar(start_month);
 }
 
+function next1() {
+    addLoad();
+    document.getElementById("block1");
+
+    $("#block1").empty();
+
+
+    $('.block').attr("onclick", 'add()');
+
+    //  var img = document.querySelector('.block');
+    // span.innerText = date.add(1, 'month').format('MMMM YYYY');
+    // var currentMonth = date.format('MM') - 1;
+    // start_month = date.startOf('month').month(currentMonth).format('dddd');
+    // buildCalendar(start_month);
+}
+
+
+
+
+
 function add() {
     $('.sidebar').toggleClass('active2')
 }
