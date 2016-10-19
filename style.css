@@ -72,7 +72,7 @@ div.topmenu a:hover {
   margin: 10px;
 }
 .footCal{
-
+  margin: 15px;
   text-align: center;
 }
 
@@ -468,9 +468,9 @@ img {
 
   margin: 10px;
 }
-.advert a{
+.advert a .myLeft1{
 
-  background: black;
+  background: white;
 }
 
 .advert span{
@@ -636,6 +636,7 @@ div.topmenu {
 
 .advert span{
   transition: transform 1s;
+  color: red;
 }
 .advert span.myBack:hover {
   transform: translateX(-50px) scale(4,4);
@@ -720,4 +721,36 @@ body:hover .fullLoad img{
   color: red;
   transform: scale(4,4);
   transition: transform 1s;
+}
+*[role="form"] {
+    max-width: 530px;
+    padding: 15px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 0.3em;
+}
+
+*[role="form"] h2 {
+    margin-left: 5em;
+    margin-bottom: 1em;
+}
+
+.myReg h2{
+  color: black;
+}
+.myRegBut a{
+  text-decoration: none;
+  color: gray;
+  float:left;
+}
+.myRegBut a:hover{
+  color: red;
+}
+.advert .myLeft1{
+
+  background: transparent;
+}
+.advert .myRight1{
+
+  background: transparent;
 }

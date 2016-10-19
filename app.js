@@ -90,6 +90,7 @@ function next1() {
 
 
 
+
 function add() {
     $('.sidebar').toggleClass('active2')
 }
