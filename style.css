@@ -5,7 +5,8 @@ body {
     background: black ;url(Photos/fon.jpg) no-repeat center center fixed   ;
     margin: 0;
     padding: 0;
-    font: 16px/24px Verdana	, sans-serif;
+    /*font: 16px/24px Verdana	, sans-serif;*/
+    font-family: Arial;
     color: #efefef;
 
 }
@@ -670,7 +671,7 @@ div.topmenu {
 
   text-align: center;
   color:white;
-  margin: 270px;
+  margin: 0;
 
 }
 body:hover .fullLoad img{
@@ -842,4 +843,59 @@ h1{
 	to{
 		transform: rotateY(360deg);
 	}
+}
+
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+html, body{
+  height: 100%;
+  font-weight: 800;
+}
+
+svg {
+    display:inline-block;
+
+    font: 10.5em 'Montserrat';
+    width: auto;
+    height: auto;
+    margin: 0 ;
+}
+
+.text-copy {
+    fill: none;
+    stroke: white;
+    stroke-dasharray: 6% 29%;
+    stroke-width: 5px;
+    stroke-dashoffset: 0%;
+    animation: stroke-offset 5.5s infinite linear;
+}
+
+.text-copy:nth-child(1){
+    stroke: #1E90FF;
+	animation-delay: -1;
+}
+
+.text-copy:nth-child(2){
+	stroke:  white;
+	animation-delay: -2s;
+}
+
+.text-copy:nth-child(3){
+	stroke: red;
+	animation-delay: -3s;
+}
+
+.text-copy:nth-child(4){
+	stroke: #4169E1;
+	animation-delay: -4s;
+}
+
+.text-copy:nth-child(5){
+	stroke: silver;
+	animation-delay: -5s;
+}
+
+@keyframes stroke-offset{
+	100% {stroke-dashoffset: -35%;}
 }
