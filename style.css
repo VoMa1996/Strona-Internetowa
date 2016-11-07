@@ -786,6 +786,7 @@ h1{
 	text-shadow: 0 1px white, 0 2px black;
 }
 .advertNew{
+
   height: 390px;
   /*background-image: radial-gradient(mintcream 0%, lightgray 100%);*/
 	margin: 7% auto;
@@ -814,7 +815,7 @@ h1{
 	top: 10px;
 	background: black;
 	overflow: hidden;
-	border: solid 2px black;
+	border: solid 3px white;
 }
 #carousel figure:nth-child(1){transform: rotateY(0deg) translateZ(288px);}
 #carousel figure:nth-child(2) { transform: rotateY(40deg) translateZ(288px);}

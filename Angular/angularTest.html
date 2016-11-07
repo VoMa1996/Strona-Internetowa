@@ -1,0 +1,48 @@
+<!-- <!doctype html>
+<html>
+
+   <head>
+      <title>AngularJS First Application</title>
+   </head>
+
+   <body ng-app = "app">
+      <h1>First Angular Application</h1>
+
+      <div ng-controller="MainController as vm">
+         <p>Enter your Name: <input type = "text" ng-model = "name"></p>
+         <p>Hello <span ng-bind = "name"></span>!</p>
+         <p>Test variable <span ng-bind = "vm.someRandomVar"></span></p>
+
+      </div>
+      LOL - {{1+2}}
+
+      <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+      <script src="app.js"></script>
+   </body>
+</html> -->
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src = "app.js">
+
+</script>
+<body ng-app="myList" ng-controller="todoCtrl">
+
+<h2>My First ToDo List with Angular</h2>
+
+<form ng-submit="todoAdd()">
+    <input type="text" ng-model="todoInput" size="50" placeholder="Add New List">
+    <input type="submit" value="Add New List">
+</form>
+
+<br>
+
+<div ng-repeat="x in todoList">
+    <input type="checkbox" ng-model="x.done"> <span ng-bind="x.todoText"></span>
+</div>
+
+<p><button ng-click="remove()">Remove List</button></p>
+
+
+</body>
+</html>
