@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html >
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src = "scripts.js"> </script>
+<script src="vendor/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+<link rel="stylesheet" href="styleLikes.css" media="all">
+<body ng-app="myModule">
+  <div class="design">
+
+
+    <div ng-controller = "myController">
+      <table>
+        <thead>
+          <th>Model</th>
+          <th>Likes</th>
+          <th>Dislikes</th>
+          <th>Like/Dislike</th>
+        </thead>
+        <tbody>
+          <tr ng-repeat = "technology in technologies">
+            <td>
+              {{technology.model}}
+            </td>
+            <td>
+              {{technology.likes}}
+            </td>
+            <td>
+              {{technology.dislikes}}
+            </td>
+            <td>
+              <input class="butL" type="button" value="Like" ng-click="incrementLikes(technology)">
+              <input class="butDL" type="button" value="Dislike" ng-click="incrementDisLikes(technology)">
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+</div>
+</body>
+</html>

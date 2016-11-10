@@ -1,0 +1,93 @@
+body{
+
+}
+
+
+.strona{
+  width: 100%;
+   height: 100%;
+   position: absolute;
+   top: 0;
+   left: 0;
+   overflow: auto;
+
+}
+
+.bossWin{
+  display: block;
+  border: 1px solid black;
+  width: 350px;
+  height: auto;
+  border: 1px solid black;
+  border-radius: 8px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+}
+
+.window{
+  background: blue;
+  border: 1px solid black;
+  height: auto;
+  width: auto;
+
+  text-align: center;
+  color: black;
+}
+
+.window2{
+
+  background: #98AFC7;
+  height: auto;
+  width: 350px;
+}
+
+.ul {
+  background: white;
+}
+.nazwa{
+
+
+  margin-left: 100px;
+
+
+}
+.done{
+  text-decoration: line-through;
+  color: black;
+}
+.inp{
+  width: 330px;
+  margin-left: 7px;
+}
+.b1{
+  border: 1px solid white;
+  color: gray;
+  background: white;
+  margin-left: 1px;
+  margin-top: 2px;
+  width: 50px;
+  margin-left: -3px;
+
+}
+.b2{
+  border: 1px solid white;
+  color: gray;
+  background: white;
+  margin-left: -80px;
+}
+
+.b1:hover{
+  border: 1px solid white;
+  color: red;
+  background: white;
+  margin-top: 2px;
+  width: 50px;
+}
+.b2:hover{
+  border: 1px solid white;
+  color: red;
+  background: white;
+  margin-top: 2px;
+
+}
