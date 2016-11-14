@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" ng-app="app" >
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <script src="vendor/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
 <link rel="stylesheet" href="style.css" media="all">
 <!-- <link rel="stylesheet" href="styleLikes.css" media="all"> -->
@@ -11,31 +12,47 @@
 
 <div class="bossWin">
 
-
-  <div class="window">
-  <div class="nazwa">
-    <h1>Notes+++</h1>
-  </div>
+<div class="window1">
+  Notes+++
 </div>
+
+
 <div class="window2">
   <div ng-controller="todoController">
     <form name="frm" ng-submit="addTodo()">
-      <input class="inp" type="text" name="newtodo" ng-model="newtodo" required />
+      <input id="textbox" class="inp" type="text" name="newtodo" ng-model="newtodo"  required />
       <button class="b2" ng-disabled="frm.$invalid">&#43;</button>
-      <button class="b1" ng-click="clearCompleted()">DEL</button>
+      <button class="b1" ng-click="clearCompleted()" ng-mousemove ="info()">DEL</button>
+      <input class="toggle" id="toggle-all" type="checkbox" ng-model="markAll"
+            ng-click="toggleMarkAll()" />
+      <label for="toggle-all">Mark all</label>
+
     </form>
+
+<div class="list">
 
 
     <ul>
       <li ng-repeat="todo in todos">
         <input type="checkbox" ng-model="todo.done" />
-        <span ng-class="{'done': todo.done}">{{todo.title}}</span>
+        <span class="my" ng-class="{'done': todo.done}">{{todo.num}}{{todo.space}}{{todo.title}}  <button class="b3" ng-click="clear()">X</button></span>
 
       </li>
     </ul>
+
+    </div>
+    <div class="footer" id="foot" >
+      <ul>
+        <li ng-repeat="todo in todoss">
+          <span ng-class="{'done': todo.done}">{{todo.space}}{{todo.num}}{{todo.title}}</span>
+        </li>
+      </ul>
+
+    </div>
   </div>
 
   </div>
+
 </div>
 
 
