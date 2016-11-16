@@ -3,7 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml" ng-app="app" >
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-<script src="vendor/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+<!-- <script src="vendor/bootstrap-3.3.7-dist/js/bootstrap.js"></script> -->
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
 <link rel="stylesheet" href="style.css" media="all">
 <!-- <link rel="stylesheet" href="styleLikes.css" media="all"> -->
 
@@ -19,13 +22,19 @@
 
 <div class="window2">
   <div ng-controller="todoController">
+
     <form name="frm" ng-submit="addTodo()">
       <input id="textbox" class="inp" type="text" name="newtodo" ng-model="newtodo"  required />
-      <button class="b2" ng-disabled="frm.$invalid">&#43;</button>
-      <button class="b1" ng-click="clearCompleted()" ng-mousemove ="info()">DEL</button>
+      <button class="b2" ng-disabled="frm.$invalid"><span class="glyphicon glyphicon-plus" aria-hidden="true" ></button>
+      <button class="b1" ng-click="clearCompleted()" ng-mousemove ="info()"><span class="glyphicon glyphicon-trash" aria-hidden="true" ></button>
+
       <input class="toggle" id="toggle-all" type="checkbox" ng-model="markAll"
             ng-click="toggleMarkAll()" />
       <label for="toggle-all">Mark all</label>
+      <div class="search">
+      </span> <input id="search" class="inp2" type="text" ng-model="searchText.title" placeholder="Search list" ><span class="glyphicon glyphicon-search findout" aria-hidden="true" >
+    </div>
+
 
     </form>
 
@@ -33,15 +42,16 @@
 
 
     <ul>
-      <li ng-repeat="todo in todos">
+      <li ng-repeat="todo in todos | filter:searchText">
         <input type="checkbox" ng-model="todo.done" />
-        <span class="my" ng-class="{'done': todo.done}">{{todo.num}}{{todo.space}}{{todo.title}}  <button class="b3" ng-click="clear()">X</button></span>
+        <span class="my" ng-class="{'done': todo.done}">{{todo.num}}{{todo.space}}{{todo.title}}  </span>
 
       </li>
     </ul>
 
     </div>
     <div class="footer" id="foot" >
+
       <ul>
         <li ng-repeat="todo in todoss">
           <span ng-class="{'done': todo.done}">{{todo.space}}{{todo.num}}{{todo.title}}</span>
