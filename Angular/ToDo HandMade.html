@@ -42,9 +42,16 @@
 
 
     <ul>
-      <li ng-repeat="todo in todos | filter:searchText">
-        <input type="checkbox" ng-model="todo.done" />
-        <span class="my" ng-class="{'done': todo.done}">{{todo.num}}{{todo.space}}{{todo.title}}  </span>
+      <li class="lili" ng-repeat="todo in todos | filter:searchText">
+        <input id="lili2" type="checkbox" ng-model="todo.done" />
+
+        <!-- <p>
+      <input type="checkbox" id="test1" />
+      <label for="test1">Red</label>
+    </p> -->
+
+        <span class="my" ng-class="{'done': todo.done}">{{todo.num}}{{todo.space}}{{todo.title}}  </span> <button id="delone"><span class="glyphicon glyphicon-remove destroy" aria-hidden="true" ng-click="deleteItem($index)"></button>
+
 
       </li>
     </ul>
@@ -52,11 +59,7 @@
     </div>
     <div class="footer" id="foot" >
 
-      <ul>
-        <li ng-repeat="todo in todoss">
-          <span ng-class="{'done': todo.done}">{{todo.space}}{{todo.num}}{{todo.title}}</span>
-        </li>
-      </ul>
+      <span >You have {{todos.length}} lists</span>
 
     </div>
   </div>

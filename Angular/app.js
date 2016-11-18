@@ -1,5 +1,3 @@
-var k = 0;
-
 angular
 
   .module('app', [])
@@ -9,7 +7,7 @@ angular
   ];
 
   $scope.addTodo = function(){
-    k++;
+    $scope.listLength++;
     $scope.todos.push({'space':" ", 'title':$scope.newtodo, 'done':false})
     $scope.newtodo = ''
     return $scope.todoss = [
@@ -19,12 +17,7 @@ angular
 
   }
   $scope.clearCompleted = function(){
-      k=-1;
     $scope.todos = $scope.todos.filter(function(item){
-
-      if(!item.done){
-        k++;
-      }
       return !item.done
 
       $scope.toggleMarkAll = true;
@@ -32,12 +25,7 @@ angular
   }
 
   $scope.clear = function(){
-      k=-1;
     $scope.todos = $scope.todos.filter(function(item){
-
-
-
-
 
     })
   }
@@ -49,24 +37,23 @@ angular
         });
     };
 
+    $scope.deleteItem = function($index){
+      $scope.todos.splice($index, 1)
 
-    // $('#startEngine').attr("src", "Photos/start.mp3");
-    //     $('#startEngine').attr("autostart", "true");
-    //     $('#startEngine').attr("loop", "true");
-    //     $('#startEngine').attr("width", "2");
-    //     $('#startEngine').attr("height", "0");
+    }
 
-
-
-  $scope.info = function(){
-    return $scope.todoss = [
-      {'space':'You have ', 'num':k+1, 'title' : ' lists'}
-    ]
-
-  }
 
 }])
 
+$( document ).ready(function(){
+//   Hide the border by commenting out the variable below
+    var $on = 'section';
+    $($on).css({
+      'background':'none',
+      'border':'none',
+      'box-shadow':'none'
+    });
+}); 
 
 // (function(){
 //   'use strict';
