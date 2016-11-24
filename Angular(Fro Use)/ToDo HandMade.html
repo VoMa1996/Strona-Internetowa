@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="app" >
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<!-- <script src="vendor/bootstrap-3.3.7-dist/js/bootstrap.js"></script> -->
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<link rel="stylesheet" href="style.css" media="all">
+<!-- <link rel="stylesheet" href="styleLikes.css" media="all"> -->
+
+<body>
+  <div class="strona">
+
+<div class="bossWin">
+
+<div class="window1">
+  Notes+++
+</div>
+
+
+<div class="window2">
+  <div ng-controller="todoController">
+
+    <form name="frm" ng-submit="addTodo()">
+      <div class="plus">
+        <span class="glyphicon glyphicon-plus myplus2" aria-hidden="true" >
+
+      </div>
+      <div class="plus2">
+        <span class="glyphicon glyphicon-search findout myplus" aria-hidden="true" >
+          </span>
+           <input id="search" class="inp2" type="text" ng-model="searchText.title" placeholder="Search list" >
+      </div>
+      <input id="textbox" class="inp" type="text" name="newtodo" ng-model="newtodo"  required />
+      <button class="b2" ng-disabled="frm.$invalid"><span class="glyphicon glyphicon-plus" aria-hidden="true" ></button>
+      <button class="b1" ng-click="clearCompleted()" ng-mousemove ="info()"><span class="glyphicon glyphicon-trash" aria-hidden="true" ></button>
+
+      <!-- <input class="toggle" id="toggle-all" type="checkbox" ng-model="markAll"
+            ng-click="toggleMarkAll()" />
+      <label for="toggle-all">Mark all</label> -->
+
+      <label class="checkbox">
+        <input class="toggle" id="toggle-all" type="checkbox" ng-model="markAll"
+              ng-click="toggleMarkAll()" />
+        <span class="box">Mark All</span>
+        <span class="my" ng-class="{'done': todo.done}">{{todo.num}}{{todo.space}}{{todo.title}}  </span>
+        
+      </label>
+
+
+    </form>
+
+<div class="list">
+
+
+    <ul>
+      <li class="lili" ng-repeat="todo in todos | filter:searchText">
+
+      <label class="checkbox">
+        <input id="inpp" type="checkbox" ng-model="todo.done">
+        <span class="box"></span>
+        <span class="my" ng-class="{'done': todo.done}">{{todo.num}}{{todo.space}}{{todo.title}}  </span>
+        <button id="delone"><span class="glyphicon glyphicon-remove destroy" aria-hidden="true" ng-click="deleteItem($index)"></button>
+      </label>
+
+
+        <!-- <input  id="lili2"type="checkbox" ng-model="todo.done" />
+          <span class="my" ng-class="{'done': todo.done}">{{todo.num}}{{todo.space}}{{todo.title}}  </span> -->
+        <!-- <button id="delone"><span class="glyphicon glyphicon-remove destroy" aria-hidden="true" ng-click="deleteItem($index)"></button> -->
+
+        <!-- <p>
+      <input type="checkbox" ng-model="todo.done" id="test1" />
+      <label for="test1"><span class="my" >{{todo.num}}{{todo.space}}{{todo.title}}  </span> <button id="delone"><span class="glyphicon glyphicon-remove destroy" aria-hidden="true" ng-click="deleteItem($index)"></button></label>
+    </p> -->
+
+
+
+
+      </li>
+    </ul>
+
+    </div>
+    <div class="footer" id="foot" >
+
+      <span >You have {{todos.length}} lists</span>
+
+    </div>
+  </div>
+
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- <div class="design">
+    <div ng-controller="myController">
+      <table>
+        <thead>
+          <th>Model</th>
+          <th>Likes</th>
+          <th>Dislikes</th>
+          <th>Like/Dislike</th>
+        </thead>
+        <tbody>
+          <tr ng-repeat = "technology in technologies">
+            <td>
+              {{technology.model}}
+            </td>
+            <td>
+              {{technology.likes}}
+            </td>
+            <td>
+              {{technology.dislikes}}
+            </td>
+            <td>
+              <input class="butL" type="button" value="Like" ng-click="incrementLikes(technology)">
+              <input class="butDL" type="button" value="Dislike" ng-click="incrementDisLikes(technology)">
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div> -->
+
+</div>
+
+  <script src="app.js"> </script>
+  <script src="scripts.js"> </script>
+</body>
+</html>

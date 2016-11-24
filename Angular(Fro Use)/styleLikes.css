@@ -1,0 +1,29 @@
+body{
+  
+  color: white;
+
+}
+
+.butL{
+  border: 1px solid green;
+  background: green;
+}
+.butDL{
+  border: 1px solid red;
+  background: red;
+}
+.butL:hover{
+  border: 1px solid white;
+  background: green;
+}
+.butDL:hover{
+  border: 1px solid white;
+  background: red;
+}
+.design{
+  margin-top: 2000px;
+  text-align: center;
+  width: 290px;
+  height: auto;
+  border: 1px solid white;
+}
