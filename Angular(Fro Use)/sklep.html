@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html  ng-app="wheelApp" >
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> -->
-<!-- <script src="vendor/bootstrap-3.3.7-dist/js/bootstrap.js"></script> -->
-<!-- Latest compiled and minified CSS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="vendor/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+Latest compiled and minified CSS
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
 <link rel="stylesheet" href="sklep2.css" media="all">
@@ -12,22 +12,189 @@
 <body ng-controller="wheelList">
 
     <div class="container">
-      <h1>{{title}}</h1>
-    </div>
-<button type="button" ng-click="addTrue()"></button>
+
+        <div class="TLogo">
+          <img  src="m3_small/tuning_logo.png" alt="tuning_logo">
+        </div>
+
+  <select class="fin" name="find" ng-model="searchText.name" placeholder="Search list">
+        <option value="">Select: Firma</option>
+        <option value1="BBS">BBS</option>
+        <option value2="Ride">Ride</option>
+        <option value3="Sport+">Sport+</option>
+        <option value4="JapanWheels">JapanWheels</option>
+        <option value5="Korp">Korp</option>
+        <option value6="BMW Original">BMW Original</option>
+        <option value7="Borbet">Borbet</option>
+  </select>
+  <select class="fin2" name="find2" ng-model="searchText.rozmiar" placeholder="Search list">
+        <option value="">Rozmiar</option>
+        <option value1="14">14</option>
+        <option value2="15">15</option>
+        <option value3="16">16</option>
+        <option value4="17">17</option>
+        <option value5="18">18</option>
+        <option value6="19">19</option>
+        <option value7="20">20</option>
+        <option value7="21">21</option>
+
+  </select>
+  <select class="fin3" name="find3" ng-model="searchText.material" placeholder="Search list">
+        <option value="">Material</option>
+        <option value1="Aluminij">Aluminij</option>
+        <option value2="Stal">Stal</option>
+
+
+  </select>
+  <div class="search">
+  <input id="search" class="inppp" type="text" ng-model="searchText.name"  placeholder="Search list" >
+</div>
+
+
     <ul>
-      <li ng-repeat="wheel in wheels ">
-        <span>{{wheel.name}}</span>
-        <p>
-          {{wheel.rozmiar}}
-        </p>
+
+
+
+      <div class="advert">
+
+      <li ng-repeat="wheel in wheels | filter:searchText">
+        <div class="advWheel">
+          <img class="imgg" src="{{wheel.picture}}" alt="{{wheel.name + 'picture'}}">
+<div class="opis">
+
+
+        <span>Firma: {{wheel.name}} </span>
+        <br>
+        <span>Rozmiary: {{wheel.rozmiar}}</span>
+        <br>
+        <span>Material: {{wheel.material}}</span>
+        <br>
+        <span>Status: {{wheel.status}}</span>
+        </div>
+
+        <div class="cena">
+          <span>Cena: {{wheel.cena}}</span>
+          <button type="button" class="but btn-default btn-lg bd-btn" data-toggle="modal" data-target="#myModal">
+
+                  <a class="sylka" href="BUY.html" >BUY</a>
+                  </button>
+        </div>
+
+</div>
+
+
       </li>
+
+      </div>
+
     </ul>
+
+
+    <button type="button" id="addBtn" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">Add</button>
+
+<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="mymodalwin  modal-content">
+      <div class="form-group">
+
+               <label for="exampleInputEmail1" >Firma</label>
+               <input
+                 type="firma"
+                 class="form-control"
+                 id="inputFirma"
+                 placeholder="Firma"
+                 name="Firma"
+                 autofocus required
+                >
+
+      </div>
+      <div class="form-group">
+
+           <label for="exampleInputEmail1" >Rozmiar</label>
+           <input
+             type="Rozmiar"
+             class="form-control"
+             id="inputRozmiar"
+             placeholder="Rozmiar"
+             name="Rozmiar"
+             autofocus required
+            >
+
+      </div>
+      <div class="form-group">
+
+                 <label for="exampleInputEmail1" >Material</label>
+                 <input
+                   type="Material"
+                   class="form-control"
+                   id="inputMaterial"
+                   placeholder="Material"
+                   name="Material"
+                   autofocus required
+                  >
+
+      </div>
+
+      <div class="form-group">
+
+                 <label for="exampleInputEmail1" >Status</label>
+                 <input
+                   type="Status"
+                   class="form-control"
+                   id="inputStatus"
+                   placeholder="Status"
+                   name="Status"
+                   autofocus required
+                  >
+
+      </div>
+      <div class="form-group">
+
+                 <label for="exampleInputEmail1" >Cena</label>
+                 <input
+                   type="price"
+                   class="form-control"
+                   id="inputFirma"
+                   placeholder="Cena"
+                   name="Cena"
+                   autofocus required
+                  >
+
+      </div>
+      <div class="form-group">
+
+                 <label for="exampleInputEmail1" >Picture</label>
+
+			<label id="test" for="file" >Wybierz Plik</label>
+			<input type="file" name="file" id="file" />
+			<input type="submit" name="upload" id="upload" value="Upload photo" />
+		</fieldset>
+                 <!-- <input
+                   type="Picture"
+                   class="form-control"
+                   id="inputPicture"
+                   placeholder="Picture"
+                   name="Picture"
+                   autofocus required
+                  > -->
+
+      </div>
+
+      <button id="addBtn2" type="button" name="button">Add</button>
+
+    </div>
+  </div>
+</div>
+
+
+
+
     <p>
       All Wheels in our shop: {{wheels.length }}
 
     </p>
 
+</div>
 </body>
 <script src="sklep1.js"> </script>
 </html>

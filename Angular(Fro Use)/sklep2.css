@@ -1,0 +1,190 @@
+body{
+  background: black;
+}
+h1{
+  text-align: center;
+}
+li{
+  list-style: none;
+}
+.advert{
+  width: 100%;
+  background: white;
+  display: inline-block;
+  border-radius: 3px;
+  border: 1px solid black;
+}
+.advWheel{
+  width: 100%;
+  display: flex;
+  border-bottom: 1px solid black;
+}
+.opis{
+  width: 100%;
+  margin-top: 35px;
+  margin-left: 15px;
+
+}
+.TLogo{
+  text-align: center;
+}
+.cena{
+  float: right;
+  color: red;
+  margin-top: 60px;
+
+}
+.but a{
+  color: red;
+  text-decoration: none;
+}
+.but a:hover{
+  color: green;
+  text-decoration: none;
+}
+
+.but{
+  outline: none;
+  width: 100px;
+  border-radius: 3px;
+
+  background: transparent;
+  border: 1px solid green;
+}
+.but:hover{
+  width: 100px;
+  border-radius: 3px;
+
+  background: black;
+  border: 1px solid green;
+}
+
+.imgg{
+  padding: 5px;
+  height: 160px;
+  width: auto;
+}
+.search{
+  display: none;
+  float: right;
+}
+.fin{
+  outline: none;
+  color: white;
+  background: black;
+  border: 0;
+  border-radius: 3px;
+  margin-left: 441px;
+}
+.fin2{
+  outline: none;
+  color: white;
+  background: black;
+  border: 0;
+  border-radius: 3px;
+
+}
+.fin3{
+  outline: none;
+  color: white;
+  background: black;
+  border: 0;
+  border-radius: 3px;
+
+}
+/*.fin:hover{
+  outline: none;
+  color: white;
+  background: black;
+  border-color: white;
+  border-radius: 3px;
+  margin-left: 41px;
+}*/
+p{
+  color: red;
+  margin-left: 50px;
+}
+#addBtn{
+  display: inline-block;
+  margin-left: 50%;
+  background: white;
+  color: black;
+  outline: none;
+  transition: transform 2s;
+}
+#addBtn:hover{
+  display: inline-block;
+  margin-left: 50%;
+  background: white;
+  color: green;
+  outline: none;
+  transform: scale(1.5,1.5);
+}
+.form-group{
+  text-align: center;
+  padding: 3px;
+}
+.form-group label{
+  color: silver;
+}
+.form-group input{
+  background: white;
+}
+#addBtn2{
+  margin: 10px;
+  width: 93%;
+  display: inline-block;
+  border-radius: 3px;
+  background: black;
+  color: green;
+  border: 0;
+
+
+}
+#addBtn2:hover{
+  margin: 10px;
+  width: 93%;
+  display: inline-block;
+  border-radius: 3px;
+  background: green;
+  color: white;
+  border: 0;
+
+}
+.mymodalwin{
+  background: black;
+}
+#formPic{
+  background: black;
+  border: 0;
+  color: red;
+}
+#file{
+  display: none;
+}
+#test{
+  border-radius: 3px;
+  color: red;
+  display: block;
+}
+#test:hover{
+  border-radius: 3px;
+  background: red;
+  color: white;
+  display: block;
+}
+#upload{
+  height: 20px;
+  width: 100%;
+  border-radius: 3px;
+  color: yellow;
+  border:0;
+  background: black;
+}
+#upload:hover{
+  border-radius: 3px;
+  background: yellow;
+  color: black;
+  border:0;
+
+}
