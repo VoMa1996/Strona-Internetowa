@@ -1,0 +1,38 @@
+.gra{
+  height: auto;
+  width: auto;
+  background: white;
+}
+.interface{
+
+  background: silver;
+  display: block;
+  border: 1px solid gray;
+  width: 700px;
+  height: 700px;
+  border-radius: 6px;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+.opis{
+  margin-top: 20px;
+}
+
+li{
+
+  margin: 2px;
+  display: inline-block;
+  list-style: none;
+  text-align: center;
+  width: 28px;
+  border: 2px solid black;
+}
+li:hover{
+
+  margin: 2px;
+  display: inline-block;
+  list-style: none;
+  text-align: center;
+  width: 28px;
+  border: 2px solid green;
+}

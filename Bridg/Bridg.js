@@ -1,8 +1,8 @@
 
-document.getElementById('plus1').value = 0;
-document.getElementById('plus2').value = 0;
-document.getElementById('plus3').value = 0;
-document.getElementById('plus4').value = 0;
+document.getElementById('plus1').value = null;
+document.getElementById('plus2').value = null;
+document.getElementById('plus3').value = null;
+document.getElementById('plus4').value = null;
 
 document.getElementById('small1').value = 0;
 document.getElementById('small2').value = 0;
@@ -13,11 +13,18 @@ function add() {
 
   var a1 = parseInt(document.getElementById('plus1').value);
   var b1 = parseInt(document.getElementById('small1').value);
+      var c1 = 0;
+      if(document.getElementById('plus1').value == 0)
+      {
+        c1 = b1;
+      }else {
+        c1 = a1 + b1;
+      }
 
-			var c1 = a1 + b1;
+
 
 			document.getElementById('endScore1').value = c1;
-      document.getElementById('plus1').value = 0;
+      document.getElementById('plus1').value = null;
       document.getElementById('small1').value = c1;
 
 
@@ -25,10 +32,16 @@ function add() {
       var a2 = parseInt(document.getElementById('plus2').value);
       var b2 = parseInt(document.getElementById('small2').value);
 
-    			var c2 = a2 + b2;
+      var c2 = 0;
+      if(document.getElementById('plus2').value == 0)
+      {
+        c2 = b2;
+      }else {
+        c2 = a2 + b2;
+      }
 
     			document.getElementById('endScore2').value = c2;
-          document.getElementById('plus2').value = 0;
+          document.getElementById('plus2').value = null;
           document.getElementById('small2').value = c2;
 
 //----------------------------------------------------------------
@@ -36,10 +49,16 @@ function add() {
           var a3 = parseInt(document.getElementById('plus3').value);
           var b3 = parseInt(document.getElementById('small3').value);
 
-              var c3 = a3 + b3;
+          var c3 = 0;
+          if(document.getElementById('plus3').value == 0)
+          {
+            c3 = b3;
+          }else {
+            c3 = a3 + b3;
+          }
 
               document.getElementById('endScore3').value = c3;
-              document.getElementById('plus3').value = 0;
+              document.getElementById('plus3').value = null;
               document.getElementById('small3').value = c3;
 
 //----------------------------------------------------------------
@@ -47,10 +66,16 @@ function add() {
               var a4 = parseInt(document.getElementById('plus4').value);
               var b4 = parseInt(document.getElementById('small4').value);
 
-                  var c4 = a4 + b4;
+              var c4 = 0;
+              if(document.getElementById('plus4').value == 0)
+              {
+                c4 = b4;
+              }else {
+                c4 = a4 + b4;
+              }
 
                   document.getElementById('endScore4').value = c4;
-                  document.getElementById('plus4').value = 0;
+                  document.getElementById('plus4').value = null;
                   document.getElementById('small4').value = c4;
 
       if(c1 > 300)

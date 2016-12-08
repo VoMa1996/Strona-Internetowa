@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="cardApp" >
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<!-- <script src="vendor/bootstrap-3.3.7-dist/js/bootstrap.js"></script> -->
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<link rel="stylesheet" href="gra.css" media="all">
+<!-- <link rel="stylesheet" href="styleLikes.css" media="all"> -->
+
+<body ng-controller="cardlist">
+  <meta charset="utf-8" />
+  <div class="gra">
+
+    <div id="interface" class="interface">
+
+      <ul>
+
+
+
+        <div class="advert">
+
+          <li ng-repeat="card in cards | filter:searchText">
+            <div class="advWheel">
+              <!-- <img class="imgg" src="{{card.picture}}" alt="{{card.name + 'picture'}}"> -->
+              <div class="opis">
+                <span id="cardPlaceId">{{card.name}} </span>
+                <br>
+              </div>
+            </div>
+          </li>
+        </div>
+
+
+      </ul>
+
+
+      <div class="player1">
+
+        <ul>
+
+
+
+          <div class="advert">
+            <span>Player1</span><br>
+            <li ng-repeat="card in player1 | filter:searchText" ng-click="play(card)">
+              <div class="advWheel">
+                <!-- <img class="imgg" src="{{card.picture}}" alt="{{card.name + 'picture'}}"> -->
+                <div class="opis">
+                  <span id="cardPlaceId">{{card.name}} </span>
+                  <br>
+                </div>
+              </div>
+            </li>
+          </div>
+
+        </ul>
+
+      </div>
+
+
+      <div class="player2">
+
+        <ul>
+
+
+
+          <div class="advert">
+            <span>Player2</span><br>
+            <li ng-repeat="card in player2 | filter:searchText">
+              <div class="advWheel">
+                <!-- <img class="imgg" src="{{card.picture}}" alt="{{card.name + 'picture'}}"> -->
+                <div class="opis">
+                  <span id="cardPlaceId">{{card.name}} </span>
+                  <br>
+                </div>
+              </div>
+            </li>
+          </div>
+
+        </ul>
+
+      </div>
+
+      <div class="play">
+
+        <ul>
+
+
+
+          <div class="advert">
+            <span>Play</span><br>
+            <li ng-repeat="card in play " >
+              <div class="advWheel">
+                <!-- <img class="imgg" src="{{card.picture}}" alt="{{card.name + 'picture'}}"> -->
+                <div class="opis" >
+                  <span id="cardPlaceId" >{{card.name}} </span>
+                  <br>
+                </div>
+              </div>
+            </li>
+          </div>
+
+        </ul>
+
+      </div>
+
+
+    </div>
+
+
+
+  </div>
+
+  <script src="gra.js"> </script>
+</body>
+</html>
