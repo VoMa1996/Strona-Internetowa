@@ -15,6 +15,8 @@
 
     <div id="interface" class="interface">
 
+      
+
       <ul>
 
 
@@ -44,7 +46,7 @@
 
           <div class="advert">
             <span>Player1</span><br>
-            <li ng-repeat="card in player1 | filter:searchText" ng-click="play(card)">
+            <li ng-repeat="card in player1" ng-click="play(card, $index)" >
               <div class="advWheel">
                 <!-- <img class="imgg" src="{{card.picture}}" alt="{{card.name + 'picture'}}"> -->
                 <div class="opis">
@@ -63,9 +65,6 @@
       <div class="player2">
 
         <ul>
-
-
-
           <div class="advert">
             <span>Player2</span><br>
             <li ng-repeat="card in player2 | filter:searchText">
@@ -87,11 +86,9 @@
 
         <ul>
 
-
-
           <div class="advert">
             <span>Play</span><br>
-            <li ng-repeat="card in play " >
+            <li ng-repeat="card in playg" >
               <div class="advWheel">
                 <!-- <img class="imgg" src="{{card.picture}}" alt="{{card.name + 'picture'}}"> -->
                 <div class="opis" >
