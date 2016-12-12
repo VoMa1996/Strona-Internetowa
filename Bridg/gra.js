@@ -229,44 +229,164 @@ cardApp.service('MyDeck', function() {
     }
 
 
+
+    service.getone = function () {
+
+      player1.push(koloda.pop());
+      return player1;
+
+    }
+    service.getone2 = function () {
+
+      player2.push(koloda.pop());
+      return player2;
+
+    }
+
     return service;
 
 });
 
 cardApp.controller('cardlist', function($scope, MyDeck) {
 
+
+var mas = [];
+
+
     MyDeck.changeCard();
     $scope.cards = MyDeck.getcard();
-
     $scope.player1 = MyDeck.getp1();
     $scope.player2 = MyDeck.getp2();
-
-
-    // $scope.player1 = MyDeck.pullCard();
-    // $scope.player2 = MyDeck.pullCard();
-    // $scope.player1 = MyDeck.pullCard();
-    // $scope.player2 = MyDeck.pullCard();
-
-
-
-
-
-
-
-
-
-    var mas = [];
-    $scope.play = function(c, b) {
-
-        mas.push(c);
-        console.log(MyDeck.player1);
-
-        console.log(c);
-
-        $scope.player1.splice(b, 1);
-        // $scope.player1 = MyDeck.player1.splice(c,1);
-    }
+    mas.push($scope.player1.pop());
     $scope.playg = mas;
 
+
+
+    var k=0;
+
+    $scope.play = function(c, b) {
+
+        if(k==1){
+
+
+
+      if(mas[mas.length -1].mast == c.mast ||  mas[mas.length -1].rang == c.rang){
+        mas.push(c);
+        $scope.player1.splice(b, 1);
+
+        $scope.playg = mas;
+        k=0;
+      }else {
+        mas = mas[mas.length-1];
+        console.log("Try Again");
+        // console.log(mas);
+
+      }
+    }else{
+      console.log("Not you now!");
+    }
+
+
+
+    var licz=0;
+          for (var i = 0; i < $scope.player2.length; i++) {
+         if($scope.player2[i].mast != mas[mas.length-1].mast && $scope.player2[i].rang != mas[mas.length-1].rang)
+         {
+           licz++;
+           if(licz == $scope.player2.length)
+           {
+             $scope.player2 = MyDeck.getone2();
+             if($scope.player2[$scope.player2.length-1].mast !=mas[mas.length-1].mast)
+             {
+
+               k=1;
+
+              //  console.log(k);
+             }
+             licz=0;
+           }
+      // console.log("nooo");
+
+         }else{
+
+          //  console.log("yeeees");
+
+         }
+    }
+
+
+      // $scope.player2 = $scope.player2.push(MyDeck.getone2());
+      // liczcard=0;
+
+
+        // console.log(mas[0].mast);
+
+    }
+
+    $scope.play2 = function(c, b) {
+
+      if(k==0){
+
+
+        if(mas[mas.length -1].mast == c.mast || mas[mas.length -1].rang == c.rang){
+          mas.push(c);
+          $scope.player2.splice(b, 1);
+
+          $scope.playg = mas;
+          k=1;
+        }else {
+          console.log("Try Again");
+        }
+
+
+      }else{
+        console.log("not you now!");
+      }
+
+var licz=0;
+      for (var i = 0; i < $scope.player1.length; i++) {
+     if($scope.player1[i].mast != mas[mas.length-1].mast && $scope.player1[i].rang != mas[mas.length-1].rang)
+     {
+       licz++;
+       if(licz == $scope.player1.length)
+       {
+         $scope.player1 = MyDeck.getone();
+         if($scope.player1[$scope.player1.length-1].mast !=mas[mas.length-1].mast)
+         {
+           k=0;
+          //  console.log(k);
+         }
+         licz=0;
+       }
+  // console.log("nooo");
+
+     }else{
+
+      //  console.log("yeeees", licz);
+      //  console.log($scope.player1.length-1);
+     }
+}
+
+
+    }
+
+$scope.get = function () {
+  $scope.player1 = MyDeck.getone();
+}
+$scope.get2 = function () {
+  $scope.player2 = MyDeck.getone2();
+}
+//     for (var i = 0; i < $scope.player1.length; i++) {
+//    if($scope.player1[i].mast != mas[mas.length-1].mast && $scope.player1[i].rang != mas[mas.length-1].rang)
+//    {
+//      $scope.player1 = MyDeck.getone();
+//    }
+//  }
+//    for (var i = 0; i < $scope.player2.length; i++) {
+//   if($scope.player2[i].mast != mas[mas.length-1].mast && $scope.player2[i].rang != mas[mas.length-1].rang)
+//   {
+//     $scope.player2 = MyDeck.getone2();
+//   }
+// }
 
 });
