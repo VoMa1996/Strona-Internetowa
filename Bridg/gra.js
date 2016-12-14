@@ -275,7 +275,19 @@ var mas = [];
         $scope.player1.splice(b, 1);
 
         $scope.playg = mas;
+        if(mas[mas.length-1].rang == 8 )
+        {
+          $scope.player2 = MyDeck.getone2();
+          $scope.player2 = MyDeck.getone2();
+          k=1;
+        }else if(mas[mas.length-1].rang == 14 || mas[mas.length-1].rang == 6 ){
+
+          k=1;
+        }else{
         k=0;
+        }
+
+
       }else {
         mas = mas[mas.length-1];
         console.log("Try Again");
@@ -288,31 +300,27 @@ var mas = [];
 
 
 
-    var licz=0;
-          for (var i = 0; i < $scope.player2.length; i++) {
-         if($scope.player2[i].mast != mas[mas.length-1].mast && $scope.player2[i].rang != mas[mas.length-1].rang)
-         {
-           licz++;
-           if(licz == $scope.player2.length)
-           {
-             $scope.player2 = MyDeck.getone2();
-             if($scope.player2[$scope.player2.length-1].mast !=mas[mas.length-1].mast)
-             {
-
-               k=1;
-
-              //  console.log(k);
-             }
-             licz=0;
-           }
-      // console.log("nooo");
-
-         }else{
-
-          //  console.log("yeeees");
-
-         }
-    }
+    // var licz=0;
+    //       for (var i = 0; i < $scope.player2.length-1; i++) {
+    //      if($scope.player2[i].mast != mas[mas.length-1].mast && $scope.player2[i].rang != mas[mas.length-1].rang)
+    //      {
+    //        licz++;
+    //        if(licz == $scope.player2.length)
+    //        {
+    //          $scope.player2 = MyDeck.getone2();
+    //          if($scope.player2[$scope.player2.length-1].mast !=mas[mas.length-1].mast)
+    //          {
+    //
+    //            k=1;
+    //
+    //           //  console.log(k);
+    //          }
+    //          licz=0;
+    //        }
+    //   // console.log("nooo");
+    //
+    //      }
+    // }
 
 
       // $scope.player2 = $scope.player2.push(MyDeck.getone2());
@@ -333,7 +341,17 @@ var mas = [];
           $scope.player2.splice(b, 1);
 
           $scope.playg = mas;
+          if(mas[mas.length-1].rang == 8 )
+          {
+            $scope.player1 = MyDeck.getone();
+            $scope.player1 = MyDeck.getone();
+            k=0;
+          }else if(mas[mas.length-1].rang == 14 || mas[mas.length-1].rang == 6){
+
+            k=0;
+          }else{
           k=1;
+          }
         }else {
           console.log("Try Again");
         }
@@ -343,38 +361,50 @@ var mas = [];
         console.log("not you now!");
       }
 
-var licz=0;
-      for (var i = 0; i < $scope.player1.length; i++) {
-     if($scope.player1[i].mast != mas[mas.length-1].mast && $scope.player1[i].rang != mas[mas.length-1].rang)
-     {
-       licz++;
-       if(licz == $scope.player1.length)
-       {
-         $scope.player1 = MyDeck.getone();
-         if($scope.player1[$scope.player1.length-1].mast !=mas[mas.length-1].mast)
-         {
-           k=0;
-          //  console.log(k);
-         }
-         licz=0;
-       }
-  // console.log("nooo");
-
-     }else{
-
-      //  console.log("yeeees", licz);
-      //  console.log($scope.player1.length-1);
-     }
-}
+// var licz=0;
+//       for (var i = 0; i < $scope.player1.length-1; i++) {
+//      if($scope.player1[i].mast != mas[mas.length-1].mast && $scope.player1[i].rang != mas[mas.length-1].rang)
+//      {
+//        licz++;
+//        if(licz == $scope.player1.length)
+//        {
+//          $scope.player1 = MyDeck.getone();
+//          if($scope.player1[$scope.player1.length-1].mast !=mas[mas.length-1].mast)
+//          {
+//            k=0;
+//           //  console.log(k);
+//          }
+//          licz=0;
+//        }
+//   // console.log("nooo");
+//
+//      }else{
+//
+//       //  console.log("yeeees", licz);
+//       //  console.log($scope.player1.length-1);
+//      }
+// }
 
 
     }
 
 $scope.get = function () {
   $scope.player1 = MyDeck.getone();
+  if(mas[mas.length-1].rang == $scope.player1[$scope.player1.length-1].rang || mas[mas.length-1].mast == $scope.player1[$scope.player1.length-1].mast){
+  k=1;
+}else{
+k=0;
+}
 }
 $scope.get2 = function () {
   $scope.player2 = MyDeck.getone2();
+  if(mas[mas.length-1].rang == $scope.player2[$scope.player2.length-1].rang || mas[mas.length-1].mast == $scope.player2[$scope.player2.length-1].mast){
+
+      k=0;
+    }else{
+      k=1;
+    }
+
 }
 //     for (var i = 0; i < $scope.player1.length; i++) {
 //    if($scope.player1[i].mast != mas[mas.length-1].mast && $scope.player1[i].rang != mas[mas.length-1].rang)
