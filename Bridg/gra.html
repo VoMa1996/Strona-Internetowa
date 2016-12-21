@@ -16,27 +16,71 @@
     <div id="interface" class="interface">
 
 
+<div class="koloda">
+
+<div class="kolodaBack">
+
+<span id="liczCard">{{cards().length}}</span>
 
       <ul>
 
 
-
         <div class="advert">
-
-          <li ng-repeat="card in cards | filter:searchText">
+            <br>
+          <li class="myKoloda2" ng-repeat="card in cards() ">
             <div class="advWheel">
               <!-- <img class="imgg" src="{{card.picture}}" alt="{{card.name + 'picture'}}"> -->
+              <img src="Fotos/cardBack.jpg" alt="animation in css3" height="96px" width="61px" border-radius="7px">
+              <!-- <div class="opis2">
+                <span id="cardPlaceId">{{card.name}} </span>
+                <br>
+              </div><br>
+              <div class="opis3">
+                <span id="centerMast">{{card.mast2}} </span>
+                <br>
+              </div>
               <div class="opis">
                 <span id="cardPlaceId">{{card.name}} </span>
                 <br>
-              </div>
+              </div> -->
             </div>
           </li>
         </div>
 
 
       </ul>
+</div>
 
+<div class="kolodaFront">
+
+
+        <ul>
+
+          <div class="advert">
+            <br>
+            <li class="myKoloda" ng-repeat="card in table.game()" >
+              <div class="advWheel">
+                <!-- <img class="imgg" src="{{card.picture}}" alt="{{card.name + 'picture'}}"> -->
+                <div class="opis2">
+                  <span id="cardPlaceId">{{card.name}} </span>
+                  <br>
+                </div><br>
+                <div class="opis3">
+                  <span id="centerMast">{{card.mast2}} </span>
+                  <br>
+                </div>
+                <div class="opis" >
+                  <span id="cardPlaceId" >{{card.name}} </span>
+                  <br>
+                </div>
+              </div>
+            </li>
+          </div>
+
+        </ul>
+</div>
+
+</div><br><br><br><br><br><br>
 
       <div class="player1">
 
@@ -45,17 +89,28 @@
 
 
           <div class="advert">
-            <span>Player1</span><br>
-            <button type="button" name="button" ng-click="get()">get</button>
-            <li ng-repeat="card in player1" ng-click="play(card, $index)" >
+            <span id="name" > Player: {{player1.name}}</span><br>
+
+  <button id="but" type="button" name="button" ng-click="get()">Get Card</button>
+
+            <li class = "cardColor1" ng-repeat="card in player1.getCards() " ng-click="player1.playCard(card , $index, player1.name)">
               <div class="advWheel">
                 <!-- <img class="imgg" src="{{card.picture}}" alt="{{card.name + 'picture'}}"> -->
+                <div class="opis2">
+                  <span id="cardPlaceId">{{card.name}} </span>
+                  <br>
+                </div><br>
+                <div class="opis3">
+                  <span id="centerMast">{{card.mast2}} </span>
+                  <br>
+                </div>
                 <div class="opis">
                   <span id="cardPlaceId">{{card.name}} </span>
                   <br>
                 </div>
               </div>
             </li>
+
           </div>
 
         </ul>
@@ -67,43 +122,34 @@
 
         <ul>
           <div class="advert">
-            <span>Player2</span><br>
-            <button type="button" name="button" ng-click="get2()">get</button>
-            <li ng-repeat="card in player2 | filter:searchText" ng-click="play2(card, $index)">
+            <span id="name"> Player: {{player2.name}}</span><br>
+
+         <button id="but" type="button" name="button" ng-click="get2()">Get Card</button>
+            <li class="cardColor1" ng-repeat="card in player2.getCards() | filter:searchText" ng-click="player2.playCard(card , $index , player2.name)">
               <div class="advWheel">
                 <!-- <img class="imgg" src="{{card.picture}}" alt="{{card.name + 'picture'}}"> -->
+                <div class="opis2">
+                  <span id="cardPlaceId">{{card.name}} </span>
+                  <br>
+                </div><br>
+                <div class="opis3">
+                  <span id="centerMast">{{card.mast2}} </span>
+                  <br>
+                </div>
                 <div class="opis">
                   <span id="cardPlaceId">{{card.name}} </span>
                   <br>
                 </div>
               </div>
             </li>
+
           </div>
 
         </ul>
 
       </div>
 
-      <div class="play">
 
-        <ul>
-
-          <div class="advert">
-            <span>Play</span><br>
-            <li ng-repeat="card in playg" >
-              <div class="advWheel">
-                <!-- <img class="imgg" src="{{card.picture}}" alt="{{card.name + 'picture'}}"> -->
-                <div class="opis" >
-                  <span id="cardPlaceId" >{{card.name}} </span>
-                  <br>
-                </div>
-              </div>
-            </li>
-          </div>
-
-        </ul>
-
-      </div>
 
 
     </div>

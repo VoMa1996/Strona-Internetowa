@@ -1,31 +1,49 @@
 .gra{
   height: auto;
   width: auto;
-  background: white;
+  background: black;
+  padding: 15px;
 }
 .interface{
 
-  background: silver;
+  /*background: silver;*/
   display: block;
-  border: 1px solid gray;
-  width: 700px;
-  height: 700px;
+  border: 0;
+  width: 1000px;
+  height: auto;
   border-radius: 6px;
   margin: 0 auto;
   margin-top: 10px;
+  padding: 10px;
+  background-image: url(Fotos/new.jpeg);
 }
 .opis{
   margin-top: 20px;
+  float: right;
+}
+
+.opis2{
+  margin-left: 1px;
+  float: left;
+}
+
+.opis3{
+  margin-top: 17px;
+  transform: scale(1.5,1.5);
 }
 
 li{
 
+  color: black;
   margin: 2px;
   display: inline-block;
   list-style: none;
   text-align: center;
-  width: 28px;
+  width: 65px;
+  height: 100px;
   border: 2px solid black;
+  border-radius: 5px;
+  margin-top: 10px;
 }
 li:hover{
 
@@ -33,6 +51,85 @@ li:hover{
   display: inline-block;
   list-style: none;
   text-align: center;
-  width: 28px;
-  border: 2px solid green;
+  width: 65px;
+  height: 100px;
+  transform: scale(1.1,1.1);
+  transition: transform 0.1s;
+    margin-top: 10px;
+}
+.myKoloda{
+  position: absolute;
+  background: white;;
+
+}
+.myKoloda2{
+
+position: absolute;
+background-image: url("Fotos/cardBack.jpg");
+
+}
+
+.koloda{
+  display: block;
+  width: 150px;
+  margin-left: 380px;
+
+  margin-top: 10px;
+
+}
+.kolodaBack{
+  margin-left: 70px;
+}
+.kolodaFront{
+    margin-top: -30px;
+
+}
+#but{
+  margin-left: -25px;
+  outline: none;
+  width: 6%;
+	height:0;
+	padding-bottom: 5%;
+    border-radius: 50%;
+	border:2px solid black;
+    overflow:hidden;
+
+    background: white;
+    box-shadow: 0 0 3px gray;
+}
+#but:hover{
+  outline: none;
+  width: 6%;
+  height:0;
+  padding-bottom: 5%;
+    border-radius: 50%;
+  border:2px solid black;
+    overflow:hidden;
+    color: white;
+    background: black;
+    box-shadow: 0 0 3px gray;
+}
+#name{
+    padding: 3px;
+    margin-left: -40px;
+    border: 2px dotted white;
+    border-radius: 10px;
+    color: white;
+
+}
+
+#liczCard{
+  color: white;
+  margin-left: 65px;
+}
+.cardColor1{
+  color: black;
+  background: white;
+}
+.cardColor2{
+  color:red;
+  background: white;
+}
+.player1{
+
 }
