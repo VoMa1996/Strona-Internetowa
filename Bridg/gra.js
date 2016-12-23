@@ -11,217 +11,253 @@ cardApp.service('MyDeck', function() {
             "rang": 6,
             "mast": "buba",
             "mast2": "♦",
-            "score": 0
+            "score": 0,
+            "redColor": true
         }, {
             "name": "7♦",
             "rang": 7,
             "mast": "buba",
             "mast2": "♦",
-            "score": 0
+            "score": 0,
+            "redColor": true
         }, {
             "name": "8♦",
             "rang": 8,
             "mast": "buba",
             "mast2": "♦",
-            "score": 0
+            "score": 0,
+            "redColor": true
         }, {
             "name": "9♦",
             "rang": 9,
             "mast": "buba",
             "mast2": "♦",
-            "score": 0
+            "score": 0,
+            "redColor": true
         }, {
             "name": "10♦",
             "rang": 10,
             "mast": "buba",
             "score": 10,
-            "mast2": "♦"
+            "mast2": "♦",
+            "redColor": true
         }, {
             "name": "B♦",
             "rang": 11,
             "mast": "buba",
             "score": 20,
-            "mast2": "♦"
+            "mast2": "♦",
+            "redColor": true
         }, {
             "name": "D♦",
             "rang": 12,
             "mast": "buba",
             "score": 10,
-            "mast2": "♦"
+            "mast2": "♦",
+            "redColor": true
         }, {
             "name": "K♦",
             "rang": 13,
             "mast": "buba",
             "score": 10,
-            "mast2": "♦"
+            "mast2": "♦",
+            "redColor": true
         }, {
             "name": "T♦",
             "rang": 14,
             "mast": "buba",
             "score": 15,
-            "mast2": "♦"
+            "mast2": "♦",
+            "redColor": true
         }, {
             "name": "6♥",
             "rang": 6,
             "mast": "czerwa",
             "mast2": "♥",
-            "score": 0
+            "score": 0,
+            "redColor": true
         }, {
             "name": "7♥",
             "rang": 7,
             "mast": "czerwa",
             "mast2": "♥",
-            "score": 0
+            "score": 0,
+            "redColor": true
         }, {
             "name": "8♥",
             "rang": 8,
             "mast": "czerwa",
             "mast2": "♥",
-            "score": 0
+            "score": 0,
+            "redColor": true
         }, {
             "name": "9♥",
             "rang": 9,
             "mast": "czerwa",
             "mast2": "♥",
-            "score": 0
+            "score": 0,
+            "redColor": true
         }, {
             "name": "10♥",
             "rang": 10,
             "mast": "czerwa",
             "score": 10,
-            "mast2": "♥"
+            "mast2": "♥",
+            "redColor": true
         }, {
             "name": "B♥",
             "rang": 11,
             "mast": "czerwa",
             "score": 20,
-            "mast2": "♥"
+            "mast2": "♥",
+            "redColor": true
         }, {
             "name": "D♥",
             "rang": 12,
             "mast": "czerwa",
             "score": 10,
-            "mast2": "♥"
+            "mast2": "♥",
+            "redColor": true
         }, {
             "name": "K♥",
             "rang": 13,
             "mast": "czerwa",
             "score": 50,
-            "mast2": "♥"
+            "mast2": "♥",
+            "redColor": true
         }, {
             "name": "T♥",
             "rang": 14,
             "mast": "czerwa",
             "score": 15,
-            "mast2": "♥"
+            "mast2": "♥",
+            "redColor": true
         }, {
             "name": "6♠",
             "rang": 6,
             "mast": "pika",
             "mast2": "♠",
-            "score": 0
+            "score": 0,
+            "redColor": false
         }, {
             "name": "7♠",
             "rang": 7,
             "mast": "pika",
             "mast2": "♠",
-            "score": 0
+            "score": 0,
+            "redColor": false
         }, {
             "name": "8♠",
             "rang": 8,
             "mast": "pika",
             "mast2": "♠",
-            "score": 0
+            "score": 0,
+            "redColor": false
         }, {
             "name": "9♠",
             "rang": 9,
             "mast": "pika",
             "mast2": "♠",
-            "score": 0
+            "score": 0,
+            "redColor": false
         }, {
             "name": "10♠",
             "rang": 10,
             "mast": "pika",
             "score": 10,
-            "mast2": "♠"
+            "mast2": "♠",
+            "redColor": false
         }, {
             "name": "B♠",
             "rang": 11,
             "mast": "pika",
             "score": 20,
-            "mast2": "♠"
+            "mast2": "♠",
+            "redColor": false
         }, {
             "name": "D♠",
             "rang": 12,
             "mast": "pika",
             "score": 10,
-            "mast2": "♠"
+            "mast2": "♠",
+            "redColor": false
         }, {
             "name": "K♠",
             "rang": 13,
             "mast": "pika",
             "score": 10,
-            "mast2": "♠"
+            "mast2": "♠",
+            "redColor": false
         }, {
             "name": "T♠",
             "rang": 14,
             "mast": "pika",
             "score": 15,
-            "mast2": "♠"
+            "mast2": "♠",
+            "redColor": false
         }, {
             "name": "6♣",
             "rang": 6,
             "mast": "kresta",
             "mast2": "♣",
-            "score": 0
+            "score": 0,
+            "redColor": false
         }, {
             "name": "7♣",
             "rang": 7,
             "mast": "kresta",
             "mast2": "♣",
-            "score": 0
+            "score": 0,
+            "redColor": false
         }, {
             "name": "8♣",
             "rang": 8,
             "mast": "kresta",
             "mast2": "♣",
-            "score": 0
+            "score": 0,
+            "redColor": false
         }, {
             "name": "9♣",
             "rang": 9,
             "mast": "kresta",
             "mast2": "♣",
-            "score": 0
+            "score": 0,
+            "redColor": false
         }, {
             "name": "10♣",
             "rang": 10,
             "mast": "kresta",
             "score": 10,
-            "mast2": "♣"
+            "mast2": "♣",
+            "redColor": false
         }, {
             "name": "B♣",
             "rang": 11,
             "mast": "kresta",
             "score": 20,
-            "mast2": "♣"
+            "mast2": "♣",
+            "redColor": false
         }, {
             "name": "D♣",
             "rang": 12,
             "mast": "kresta",
             "score": 10,
-            "mast2": "♣"
+            "mast2": "♣",
+            "redColor": false
         }, {
             "name": "K♣",
             "rang": 13,
             "mast": "kresta",
             "score": 10,
-            "mast2": "♣"
+            "mast2": "♣",
+            "redColor": false
         }, {
             "name": "T♣",
             "rang": 14,
             "mast": "kresta",
             "score": 15,
-            "mast2": "♣"
+            "mast2": "♣",
+            "redColor": false
         },
     ];
 
@@ -353,22 +389,77 @@ cardApp.controller('cardlist', function($scope, MyDeck) {
     if(card.mast === $scope.table.first().mast || card.rang === $scope.table.first().rang || card.rang === 11)
     {
       if(c === "Vova" && card.rang === 8){
+        if(MyDeck.getCards().length < 3)
+        {
+          MyDeck.pushCards();
+          MyDeck.pushCards($scope.table.pullAllCards());
+
+          $scope.table.take(MyDeck.topCard());
+
+          console.log($scope.cards[$scope.cards.length-1]);
+          console.log(MyDeck.getCards());
+        }
+
           $scope.player1.takeCard(MyDeck.topCard());
           $scope.player1.takeCard(MyDeck.topCard());
       }else if(c === "Lexa" && card.rang === 8){
+        if(MyDeck.getCards().length < 3)
+        {
+          MyDeck.pushCards();
+          MyDeck.pushCards($scope.table.pullAllCards());
+
+          $scope.table.take(MyDeck.topCard());
+
+          console.log($scope.cards[$scope.cards.length-1]);
+          console.log(MyDeck.getCards());
+        }
         $scope.player2.takeCard(MyDeck.topCard());
         $scope.player2.takeCard(MyDeck.topCard());
       }
 
       if(c === "Vova" && card.rang === 7){
+        if(MyDeck.getCards().length < 2)
+        {
+          MyDeck.pushCards();
+          MyDeck.pushCards($scope.table.pullAllCards());
+
+          $scope.table.take(MyDeck.topCard());
+
+          console.log($scope.cards[$scope.cards.length-1]);
+          console.log(MyDeck.getCards());
+        }
+
           $scope.player1.takeCard(MyDeck.topCard());
 
       }else if(c === "Lexa" && card.rang === 7){
+        if(MyDeck.getCards().length < 2)
+        {
+          MyDeck.pushCards();
+          MyDeck.pushCards($scope.table.pullAllCards());
+
+          $scope.table.take(MyDeck.topCard());
+
+          console.log($scope.cards[$scope.cards.length-1]);
+          console.log(MyDeck.getCards());
+        }
+
         $scope.player2.takeCard(MyDeck.topCard());
 
       }
 
       if(c === "Vova" && card.rang === 13 && card.mast === "czerwa"){
+
+        if(MyDeck.getCards().length < 6)
+        {
+          MyDeck.pushCards();
+          MyDeck.pushCards($scope.table.pullAllCards());
+
+          $scope.table.take(MyDeck.topCard());
+
+          console.log($scope.cards[$scope.cards.length-1]);
+          console.log(MyDeck.getCards());
+        }
+
           $scope.player1.takeCard(MyDeck.topCard());
           $scope.player1.takeCard(MyDeck.topCard());
           $scope.player1.takeCard(MyDeck.topCard());
@@ -376,6 +467,18 @@ cardApp.controller('cardlist', function($scope, MyDeck) {
           $scope.player1.takeCard(MyDeck.topCard());
 
       }else if(c === "Lexa" && card.rang === 13 && card.mast === "czerwa"){
+
+        if(MyDeck.getCards().length < 6)
+        {
+          MyDeck.pushCards();
+          MyDeck.pushCards($scope.table.pullAllCards());
+
+          $scope.table.take(MyDeck.topCard());
+
+          console.log($scope.cards[$scope.cards.length-1]);
+          console.log(MyDeck.getCards());
+        }
+
         $scope.player2.takeCard(MyDeck.topCard());
         $scope.player2.takeCard(MyDeck.topCard());
         $scope.player2.takeCard(MyDeck.topCard());
@@ -466,21 +569,6 @@ k = MyDeck.getMast();
 
 console.log(k);
 $scope.player1.takeCard(MyDeck.topCard());
-  // if(k.mast === "czerwa" || k.mast === "buba")
-  // {
-  //   $("li[$index]").remove("class", 'cardColor1');
-  //   $("li[$index]").attr("class", 'cardColor2');
-  //
-  //
-  // }else if(k.mast === "pika" || k.mast === "kresta")
-  // {
-  //   $("li[$index]").remove("class", 'cardColor2');
-  //   $("li[$index]").attr("class", 'cardColor1');
-  // }
-
-
-
-
 
 
   if(MyDeck.getCards().length < 1)
@@ -490,9 +578,10 @@ $scope.player1.takeCard(MyDeck.topCard());
     $scope.table.take(MyDeck.topCard());
 
     console.log($scope.cards[$scope.cards.length-1]);
-    console.log(MyDeck.getCards());
+    console.log(MyDeck.getCards().length);
 
   }
+  console.log(MyDeck.getCards().length);
 }
 
 $scope.get2 = function () {

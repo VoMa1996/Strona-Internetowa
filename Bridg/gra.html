@@ -58,7 +58,7 @@
 
           <div class="advert">
             <br>
-            <li class="myKoloda" ng-repeat="card in table.game()" >
+            <li class="myKoloda" ng-class="{redColor: card.redColor}" ng-repeat="card in table.game()" >
               <div class="advWheel">
                 <!-- <img class="imgg" src="{{card.picture}}" alt="{{card.name + 'picture'}}"> -->
                 <div class="opis2">
@@ -93,7 +93,7 @@
 
   <button id="but" type="button" name="button" ng-click="get()">Get Card</button>
 
-            <li class = "cardColor1" ng-repeat="card in player1.getCards() " ng-click="player1.playCard(card , $index, player1.name)">
+            <li class = "cardColor1" ng-class="{redColor: card.redColor}"  ng-repeat="card in player1.getCards() " ng-click="player1.playCard(card , $index, player1.name)">
               <div class="advWheel">
                 <!-- <img class="imgg" src="{{card.picture}}" alt="{{card.name + 'picture'}}"> -->
                 <div class="opis2">
@@ -125,10 +125,11 @@
             <span id="name"> Player: {{player2.name}}</span><br>
 
          <button id="but" type="button" name="button" ng-click="get2()">Get Card</button>
-            <li class="cardColor1" ng-repeat="card in player2.getCards() | filter:searchText" ng-click="player2.playCard(card , $index , player2.name)">
+            <li  class="cardColor1" ng-class="{redColor: card.redColor}" class="cardColor1"   ng-repeat="card in player2.getCards() | filter:searchText" ng-click="player2.playCard(card , $index , player2.name)">
+            <!-- ng-if="card.mast == 'czerwa' || card.mast == 'buba'" style="color: red" -->
               <div class="advWheel">
                 <!-- <img class="imgg" src="{{card.picture}}" alt="{{card.name + 'picture'}}"> -->
-                <div class="opis2">
+                <div class="opis2" >
                   <span id="cardPlaceId">{{card.name}} </span>
                   <br>
                 </div><br>

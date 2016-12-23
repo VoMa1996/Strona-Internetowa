@@ -102,12 +102,12 @@ background-image: url("Fotos/cardBack.jpg");
   width: 6%;
   height:0;
   padding-bottom: 5%;
-    border-radius: 50%;
+  border-radius: 50%;
   border:2px solid black;
-    overflow:hidden;
-    color: white;
-    background: black;
-    box-shadow: 0 0 3px gray;
+  overflow:hidden;
+  color: white;
+  background: black;
+  box-shadow: 0 0 3px gray;
 }
 #name{
     padding: 3px;
@@ -126,7 +126,7 @@ background-image: url("Fotos/cardBack.jpg");
   color: black;
   background: white;
 }
-.cardColor2{
+.redColor{
   color:red;
   background: white;
 }
